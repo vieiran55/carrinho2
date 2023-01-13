@@ -1,0 +1,6 @@
+@import 'styles/variaveis';
+@import "styles/breakpoints";
+
+.corpo{
+  @apply bg-gradient-to-r from-cyan-500 to-blue-500;
+}

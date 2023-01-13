@@ -1,0 +1,69 @@
+@import 'styles/variaveis';
+@import "styles/breakpoints";
+
+.item {
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 320px;
+    background-color: $grey;
+    @media (min-width: $mobile) {
+        height: 145px;
+      }
+      @media (min-width: $desktop_md) {
+      }
+    &__imagem {
+      img {
+        float: left;
+        border-radius: 8px;
+        width: 70px;
+        height: 70px;
+        background-size:cover;
+        margin-right: 5px;
+      }
+    }
+    &__descricao {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 0 20px;
+      @media (max-width: $desktop_xsm) {
+        flex-direction: row;
+        margin-top: 20px;
+        padding: 0;
+      }
+    }
+    &__titulo {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      h2 {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+    }
+    &__valor {
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+        font-size: 1.75rem;
+        font-weight: bold;
+        color: $red;
+        width: 100%;
+    }
+  }
+
+  .item__SetordePreco{
+  }
+
+  .conteiner{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }

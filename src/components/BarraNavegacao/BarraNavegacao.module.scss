@@ -1,0 +1,18 @@
+@import 'styles/variaveis';
+@import "styles/breakpoints";
+
+.barra{
+  @apply h-16 flex flex-row justify-between bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white text-lg ;
+  .links{
+    @apply p-4;
+    &__itens{
+      @apply p-1;
+    }
+  }
+  .carrinho{
+    @apply bg-white w-14 rounded-l-lg;
+    &__icon{
+      @apply h-full w-12 fill-black p-1 pr-0;
+    }
+  }
+}
