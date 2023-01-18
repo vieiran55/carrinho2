@@ -40,7 +40,7 @@ module.exports = {
         },
         wiggle: {
           "0%, 100%": { transform: "rotate(-3deg)" },
-          "50%": { transform: "rotate(3deg)" }
+          "50%": { transform: "rotate(3deg)" },
         },
         clock: {
           "0%": { transform: "rotate(0.0deg)" },
@@ -51,7 +51,7 @@ module.exports = {
         "waving-hand": "wave 10s linear infinite",
         "loop-clock": "clock 10s linear infinite",
         wiggle: "wiggle 1s ease-in-out infinite",
-        balanco: "wiggle 200ms ease-in-out"
+        balanco: "wiggle 200ms ease-in-out",
       },
     },
   },

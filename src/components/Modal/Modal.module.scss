@@ -1,6 +1,6 @@
 .modal{
   @apply absolute  w-[20rem] bg-red-600 self-end mt-16 flex items-center flex-col justify-center opacity-90 drop-shadow-4xl rounded-lg rounded-tr-none;
   .texto{
-    @apply text-3xl text-white font-inter ;
+    @apply text-2xl text-white font-inter ;
   }
 }

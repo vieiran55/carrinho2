@@ -1,8 +1,9 @@
 import styles from "./Itens.module.scss";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { IOpcoes } from "interfaces/IOpcoes";
 
 interface Props {
   title: string;
@@ -10,13 +11,25 @@ interface Props {
   photo: string;
   price: number;
   id: number;
+  listaDeCompras: IOpcoes[];
+  setListaDeCompras: React.Dispatch<React.SetStateAction<IOpcoes[]>>;
 }
 
+
 export default function Itens(props: Props) {
-  const { id, title, description, price, photo } = props;
+  const { id, title, description, price, photo, listaDeCompras , setListaDeCompras } = props;
   const [efeito, setEfeito] = useState(false);
   const navigate = useNavigate();
 
+  const card = (id: number, title: string, photo: string, price: number) => {
+    return { id: id, title: title, photo: photo, price: price };
+  };
+
+
+  const handleclick = () => {
+    setListaDeCompras((listaDeCompras) => [...listaDeCompras, card(id, title, photo, price)]);
+    setEfeito(true);
+  };
   return (
     <>
       <div className={styles.item}>
@@ -45,9 +58,7 @@ export default function Itens(props: Props) {
               className={`${
                 efeito && "animate-balanco"
               }  p-0 fill-[#5AAD7D] rounded h-8 w-8 cursor-pointer`}
-              onClick={() => {
-                setEfeito(true);
-              }}
+              onClick={handleclick}
               onAnimationEnd={() => setEfeito(false)}
             />
           </div>
