@@ -17,7 +17,6 @@ interface Props {
 
 export default function ItensCarrinho(props: Props) {
   const { id, title, price, photo, listaDeCompras, setListaDeCompras } = props;
-  const [efeito, setEfeito] = useState(false);
   const index = listaDeCompras.findIndex((user) => user.id === id);
 
 
@@ -30,11 +29,11 @@ export default function ItensCarrinho(props: Props) {
       <div className={styles.item}>
         <div className={styles.item__titulo}>
           <h2>{title.substring(0, 20)}</h2>
+          <TfiTrash
+            className={`${"animate-balanco"}  p-0 mt-2 fill-red-500 rounded h-4 w-4 cursor-pointer`}
+            onClick={excluirItemDoCarrinho}
+          />
         </div>
-        <TfiTrash
-          className={`${"animate-balanco"}  p-0 fill-red-500 rounded h-4 w-4 cursor-pointer`}
-          onClick={excluirItemDoCarrinho}
-        />
         <div className={styles.conteiner}>
           <div className={styles.item__imagem}>
             <img src={`${photo}`} alt={title} />

@@ -4,21 +4,43 @@ import { IOpcoes } from "interfaces/IOpcoes";
 import FinalCompra from "pages/FinalCompra";
 import Home from "pages/Home";
 import { useState } from "react";
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import estilos from "./styles/Routes.module.scss";
 
-export default function AppRouter(){
-
+export default function AppRouter() {
   const [cart, setCart] = useState(false);
+  const [vazio, setVazio] = useState(false);
   const [listaDeCompras, setListaDeCompras] = useState<IOpcoes[]>([]);
 
-  return(
+  return (
     <main className={estilos.routes}>
       <Router>
-        <BarraNavegacao cart={cart} setCart={setCart}/>
-        <Modal listaDeCompras={listaDeCompras} setListaDeCompras={setListaDeCompras} cart={cart} setCart={setCart}/>
+        <BarraNavegacao
+          vazio={vazio}
+          setVazio={setVazio}
+          cart={cart}
+          listaDeCompras={listaDeCompras}
+          setListaDeCompras={setListaDeCompras}
+          setCart={setCart}
+        />
+        <Modal
+          listaDeCompras={listaDeCompras}
+          setListaDeCompras={setListaDeCompras}
+          cart={cart}
+          setCart={setCart}
+        />
         <Routes>
-          <Route path="/" element={<Home listaDeCompras={listaDeCompras} setListaDeCompras={setListaDeCompras}/>} />
+          <Route
+            path="/"
+            element={
+              <Home
+                vazio={vazio}
+                setVazio={setVazio}
+                listaDeCompras={listaDeCompras}
+                setListaDeCompras={setListaDeCompras}
+              />
+            }
+          />
           <Route path="/finalcompra" element={<FinalCompra />} />
         </Routes>
       </Router>

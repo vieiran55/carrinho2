@@ -4,3 +4,11 @@
 .corpo{
   @apply bg-gradient-to-r from-cyan-500 to-blue-500;
 }
+
+.botoes__tipo__up{
+  @apply animate-bounce;
+}
+
+.seta{
+  @apply animate-waving-hand h-6;
+}

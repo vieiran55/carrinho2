@@ -37,9 +37,10 @@
       }
     }
     &__titulo {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      justify-content: space-around;
         width: 100%;
       h2 {
         text-align: center;

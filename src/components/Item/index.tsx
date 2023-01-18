@@ -5,19 +5,31 @@ import { IOpcoes } from "interfaces/IOpcoes";
 
 interface Props {
   listaDeCompras: IOpcoes[];
-  setListaDeCompras: React.Dispatch<React.SetStateAction<IOpcoes[]>>
+  setListaDeCompras: React.Dispatch<React.SetStateAction<IOpcoes[]>>;
+  vazio: boolean;
+  setVazio: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-
 export default function Item(props: Props) {
-
-  const {listaDeCompras, setListaDeCompras} = props;
+  const {
+    listaDeCompras,
+    setListaDeCompras,
+    vazio,
+    setVazio,
+  } = props;
 
   return (
     <>
       <div className={styles.itens}>
         {equipamentos.map((item) => (
-          <Itens listaDeCompras={listaDeCompras} setListaDeCompras={setListaDeCompras} key={item.id} {...item} />
+          <Itens
+            vazio={vazio}
+            setVazio={setVazio}
+            listaDeCompras={listaDeCompras}
+            setListaDeCompras={setListaDeCompras}
+            key={item.id}
+            {...item}
+          />
         ))}
       </div>
     </>

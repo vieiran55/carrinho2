@@ -10,9 +10,12 @@
     }
   }
   .carrinho{
-    @apply bg-white w-14 rounded-l-lg;
+    @apply bg-white w-14 rounded-l-lg flex;
     &__icon{
       @apply h-full w-12 fill-black p-1 pr-0;
+    }
+    &__quantidade{
+      @apply text-green-600 block absolute bg-violet-800 w-7 text-center rounded-full mt-8 ml-5 opacity-90 font-bold;
     }
   }
 }
