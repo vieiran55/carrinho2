@@ -16,7 +16,7 @@ interface Props {
 }
 
 export default function ItensCarrinho(props: Props) {
-  const { id, title, price, photo, listaDeCompras, setListaDeCompras } = props;
+  const { id, title, price, photo,  listaDeCompras, setListaDeCompras } = props;
   const index = listaDeCompras.findIndex((user) => user.id === id);
 
 

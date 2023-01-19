@@ -5,6 +5,7 @@
       "photo": "/assets/equipamentos/asrock.png",
       "price": 769.99,
       "id": 1
+
     },
     {
         "title": "SSD 960 GB Kingston A400",
@@ -12,6 +13,7 @@
         "photo": "/assets/equipamentos/SSD960GBKingston.png",
         "price": 445.99,
         "id": 2
+  
       },
       {
         "title": "Fonte XPG Core Reactor, 850W, 80 Plus Gold Modular",
@@ -19,6 +21,7 @@
         "photo": "/assets/equipamentos/FonteXPGCoreReactor.png",
         "price": 699.99,
         "id": 3
+  
       },
       {
         "title": "Placa de Vídeo Galax GeForce RTX 3060",
@@ -26,6 +29,7 @@
         "photo": "/assets/equipamentos/GeForceRTX3060.png",
         "price": 2359.99,
         "id": 4
+  
       },
       {
         "title": "Water Cooler Rise Mode Gamer Black, RGB, 240mm, Preto - RM-WCB-02-RGB",
@@ -33,6 +37,7 @@
         "photo": "/assets/equipamentos/WaterCoolerRise.png",
         "price": 479.99,
         "id": 5
+  
       },
       {
         "title": "Placa de Video Gigabyte GeForce RTX 3060",
@@ -40,6 +45,7 @@
         "photo": "/assets/equipamentos/GigabyteGeForceRTX3060.png",
         "price": 2399.99,
         "id": 6
+  
       },
       {
         "title": "Processador Intel Core i5-10400F, 2.9GHz (4.3GHz Max Turbo), Cache 12MB, 6 Núcleos, 12 Threads, LGA 1200 - BX8070110400F",
@@ -47,6 +53,7 @@
         "photo": "/assets/equipamentos/Corei5-10400F.png",
         "price": 849.99,
         "id": 7
+  
       },
       {
         "title": "Kit Gamer Motospeed White Storm - Teclado Mecânico CK82 RGB Switch Blue ANSI + Headset G750 RGB 7.1 USB + Mouse V50 4000DPI RGB",
@@ -54,5 +61,6 @@
         "photo": "/assets/equipamentos/kitgamer.png",
         "price": 849.99,
         "id": 8
+  
       }
   ]
