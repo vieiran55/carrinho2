@@ -40,6 +40,7 @@ export default function ItensCarrinho(props: Props) {
           </div>
           <div className={styles.item__SetordePreco}>
             <div className={styles.item__valor}> R$ {price.toFixed(2)}</div>
+
           </div>
         </div>
       </div>
