@@ -18,7 +18,6 @@ export default function BarraNavegacao(props: Props) {
   
 
   const abrirCarrinho = () => {
-    console.log(listaDeCompras);
     if (!cart) {
       setCart(true);
       console.log("Agora esta Desativado");

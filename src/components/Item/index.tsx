@@ -8,6 +8,10 @@ interface Props {
   setListaDeCompras: React.Dispatch<React.SetStateAction<IOpcoes[]>>;
   vazio: boolean;
   setVazio: React.Dispatch<React.SetStateAction<boolean>>;
+  quantidadeArr: number;
+  setQuantidadeArr: React.Dispatch<React.SetStateAction<number>>;
+  isShown: boolean;
+  setIsShown: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function Item(props: Props) {
@@ -16,6 +20,10 @@ export default function Item(props: Props) {
     setListaDeCompras,
     vazio,
     setVazio,
+    quantidadeArr,
+    setQuantidadeArr,
+    isShown,
+    setIsShown,
   } = props;
 
   return (
@@ -23,6 +31,10 @@ export default function Item(props: Props) {
       <div className={styles.itens}>
         {equipamentos.map((item) => (
           <Itens
+            isShown={isShown}
+            setIsShown={setIsShown}
+            quantidadeArr={quantidadeArr}
+            setQuantidadeArr={setQuantidadeArr}
             vazio={vazio}
             setVazio={setVazio}
             listaDeCompras={listaDeCompras}

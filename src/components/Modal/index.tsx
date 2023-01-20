@@ -9,6 +9,12 @@ interface Props {
   setCart: React.Dispatch<React.SetStateAction<boolean>>;
   listaDeCompras: IOpcoes[];
   setListaDeCompras: React.Dispatch<React.SetStateAction<IOpcoes[]>>;
+  quantidadeArr: number;
+  setQuantidadeArr: React.Dispatch<React.SetStateAction<number>>;
+  isShown: boolean;
+  setIsShown: React.Dispatch<React.SetStateAction<boolean>>;
+  vazio: boolean;
+  setVazio: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function Modal(props: Props) {
@@ -17,9 +23,18 @@ export default function Modal(props: Props) {
     setCart,
     listaDeCompras,
     setListaDeCompras,
+    quantidadeArr,
+    setQuantidadeArr,
+    isShown,
+    setIsShown,
+    vazio,
+    setVazio,
   } = props;
 
-  const total = listaDeCompras.reduce((total, valor) => total + valor.price, 0);
+  const total = listaDeCompras.reduce(
+    (total, valor) => total + valor.price * valor.quantidade,
+    0
+  );
 
   return (
     <div
@@ -29,12 +44,29 @@ export default function Modal(props: Props) {
       })}
     >
       <h1 className={estilos.texto}>CARRINHO DE COMPRAS</h1>
-      <ItemCarrinho
-        listaDeCompras={listaDeCompras}
-        setListaDeCompras={setListaDeCompras}
-      />
+      {isShown && (
+        <>
+          <div
+            className={classNames({
+              ["hidden"]: vazio,
+            })}
+          >
+            Seu carrinho está vazio
+          </div>
+          <div>
+            <ItemCarrinho
+              isShown={isShown}
+              setIsShown={setIsShown}
+              quantidadeArr={quantidadeArr}
+              setQuantidadeArr={setQuantidadeArr}
+              listaDeCompras={listaDeCompras}
+              setListaDeCompras={setListaDeCompras}
+            />
+          </div>
+        </>
+      )}
       <div>
-        <h1 className="text-white">{`Total: R$ ${total}`}</h1>
+        <h1 className="text-white">{`Total: R$ ${total.toFixed(2)}`}</h1>
       </div>
     </div>
   );

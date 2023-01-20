@@ -3,4 +3,5 @@ export interface IOpcoes{
   title: string;
   photo: string;
   price: number;
+  quantidade: number;
 }

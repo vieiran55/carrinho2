@@ -8,12 +8,14 @@
   align-items: center;
   gap: 40px;
   width: 100%;
+  margin-top: 2em;
   @media (min-width: $mobile) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }
+  @apply drop-shadow-2xl;
 }
 
 .botao{

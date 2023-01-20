@@ -1,28 +1,70 @@
 import styles from "./ItensCarrinho.module.scss";
-import { MdOutlineAddShoppingCart } from "react-icons/md";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { RxCross2 } from "react-icons/rx";
+import { useEffect, useState } from "react";
 import { IOpcoes } from "interfaces/IOpcoes";
 import { TfiTrash } from "react-icons/tfi";
+import { IoIosAddCircleOutline } from "react-icons/io";
+import { IoIosRemoveCircleOutline } from "react-icons/io";
+
 
 interface Props {
   title: string;
   photo: string;
   price: number;
   id: number;
+  quantidade: number;
+  quantidadeArr: number;
+  setQuantidadeArr: React.Dispatch<React.SetStateAction<number>>;
   listaDeCompras: IOpcoes[];
   setListaDeCompras: React.Dispatch<React.SetStateAction<IOpcoes[]>>;
+  isShown: boolean;
+  setIsShown: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function ItensCarrinho(props: Props) {
-  const { id, title, price, photo,  listaDeCompras, setListaDeCompras } = props;
+  const {
+    id,
+    title,
+    price,
+    photo,
+    quantidade,
+    listaDeCompras,
+    setListaDeCompras,
+    quantidadeArr,
+    setQuantidadeArr,
+    isShown,
+    setIsShown,
+  } = props;
   const index = listaDeCompras.findIndex((user) => user.id === id);
-
+  const [cont, setCont] = useState<IOpcoes[]>([]);
 
   const excluirItemDoCarrinho = () => {
     listaDeCompras.splice(index, 1);
     setListaDeCompras([...listaDeCompras]);
+  };
+
+  const quantidadeElementos = listaDeCompras.filter((x) => x.id === id).length;
+
+  const recarrega1 = () => {
+    setIsShown(false);
+  };
+  const recarrega2 = () => {
+    setIsShown(true);
+  };
+
+  const aumentarQuantidade = () => {
+    setTimeout(recarrega1, 100);
+    setTimeout(recarrega2, 150);
+    const maisQuantidade = listaDeCompras[index].quantidade++;
+  };
+
+  const diminuirQuantidade = () => {
+    if (listaDeCompras[index].quantidade > 1){
+      setTimeout(recarrega1, 100);
+      setTimeout(recarrega2, 150);
+      const menosQuantidade = listaDeCompras[index].quantidade--;
+    }else{
+      excluirItemDoCarrinho();
+    }
   };
   return (
     <>
@@ -30,7 +72,7 @@ export default function ItensCarrinho(props: Props) {
         <div className={styles.item__titulo}>
           <h2>{title.substring(0, 20)}</h2>
           <TfiTrash
-            className={`${"animate-balanco"}  p-0 mt-2 fill-red-500 rounded h-4 w-4 cursor-pointer`}
+            className={styles.lixeira}
             onClick={excluirItemDoCarrinho}
           />
         </div>
@@ -39,8 +81,25 @@ export default function ItensCarrinho(props: Props) {
             <img src={`${photo}`} alt={title} />
           </div>
           <div className={styles.item__SetordePreco}>
-            <div className={styles.item__valor}> R$ {price.toFixed(2)}</div>
-
+            <p className={styles.item__valor}> R$ {price.toFixed(2)}</p>
+            <div className={styles.item__quantidade}>
+              <p>
+                Qtd:
+                <button
+                  className={styles.botoes}
+                  onClick={() => diminuirQuantidade()}
+                >
+                  <IoIosRemoveCircleOutline className={styles.botoes__icones}/>
+                </button>
+                {quantidade}
+                <button
+                  className={styles.botoes}
+                  onClick={() => aumentarQuantidade()}
+                >
+                  <IoIosAddCircleOutline className={styles.botoes__icones}/>
+                </button>
+              </p>
+            </div>
           </div>
         </div>
       </div>

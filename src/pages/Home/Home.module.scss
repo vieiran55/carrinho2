@@ -2,7 +2,7 @@
 @import "styles/breakpoints";
 
 .corpo{
-  @apply bg-gradient-to-r from-cyan-500 to-blue-500;
+  @apply bg-gradient-to-r from-cyan-500 to-blue-500 flex flex-col justify-center items-center;
 }
 
 .botoes__tipo__up{
@@ -10,5 +10,5 @@
 }
 
 .seta{
-  @apply animate-waving-hand h-6;
+  @apply fill-red-700 animate-waving-hand h-8 w-8;
 }
