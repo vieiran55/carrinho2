@@ -1,8 +1,8 @@
 import Item from "components/Item";
 import { IOpcoes } from "interfaces/IOpcoes";
-import estilos from "./Home.module.scss";
+import estilos from "./CamisasTime.module.scss";
 import { BsArrowUpCircleFill } from "react-icons/bs";
-
+import Camisas from "components/Camisas";
 
 interface Props {
   listaDeCompras: IOpcoes[];
@@ -15,7 +15,7 @@ interface Props {
   setIsShown: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function Home(props: Props) {
+export default function CamisasTime(props: Props){
   const {
     listaDeCompras,
     setListaDeCompras,
@@ -33,9 +33,9 @@ export default function Home(props: Props) {
       behavior: "smooth",
     });
   };
-  return (
+  return(
     <main className={estilos.corpo}>
-      <Item
+      <Camisas
         isShown={isShown}
         setIsShown={setIsShown}
         quantidadeArr={quantidadeArr}

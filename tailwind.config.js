@@ -38,6 +38,10 @@ module.exports = {
           "60%": { transform: "rotate(0.0deg)" },
           "100%": { transform: "rotate(0.0deg)" },
         },
+        fadeOut: {
+          "0%": { backgroundColor: "colors.red.300" },
+          "100%": { backgroundColor: "colors.transparent" },
+        },
         wiggle: {
           "0%, 100%": { transform: "rotate(-3deg)" },
           "50%": { transform: "rotate(3deg)" },
@@ -46,12 +50,23 @@ module.exports = {
           "0%": { transform: "rotate(0.0deg)" },
           "100%": { transform: "rotate(360deg)" },
         },
+        "fade-in-down": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(-10px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
       },
       animation: {
         "waving-hand": "wave 10s linear infinite",
         "loop-clock": "clock 10s linear infinite",
         wiggle: "wiggle 1s ease-in-out infinite",
         balanco: "wiggle 200ms ease-in-out",
+        fadeinDown: "fade-in-down 0.5s ease-out",
       },
     },
   },

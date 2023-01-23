@@ -10,6 +10,7 @@
     }
   }
   .carrinho{
+    transition: 500ms;
     @apply bg-white w-14 rounded-l-lg flex;
     &__icon{
       @apply h-full w-12 fill-black p-1 pr-0;

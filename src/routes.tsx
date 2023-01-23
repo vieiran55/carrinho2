@@ -1,8 +1,11 @@
 import BarraNavegacao from "components/BarraNavegacao";
+import Gamer from "components/Gamer";
 import Modal from "components/Modal";
 import { IOpcoes } from "interfaces/IOpcoes";
+import CamisasTime from "pages/CamisasTime";
 import FinalCompra from "pages/FinalCompra";
 import Home from "pages/Home";
+import Infomatica from "pages/Informatica";
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import estilos from "./styles/Routes.module.scss";
@@ -13,27 +16,6 @@ export default function AppRouter() {
   const [listaDeCompras, setListaDeCompras] = useState<IOpcoes[]>([]);
   const [quantidadeArr, setQuantidadeArr] = useState(1);
   const [isShown, setIsShown] = useState(true);
-
-  // function hasDuplicates(arr: number[] = []) {
-  //   return new Set(arr).size !== arr.length;
-  // }
-
-  // const arr = listaDeCompras.map(function (item) {
-  //   return item.id;
-  // });
-
-  // const verificarIguais = () => {
-  //   console.log(listaDeCompras);
-  //   if (hasDuplicates(arr)) {
-  //     setTemDuplicado(true);
-  //     console.log("Duplicate elements found.");
-  //     console.log(temDuplicado);
-  //   } else {
-  //     console.log("No Duplicates found.");
-  //     setTemDuplicado(false);
-  //     console.log(temDuplicado);
-  //   }
-  // };
 
   return (
     <main className={estilos.routes}>
@@ -63,6 +45,36 @@ export default function AppRouter() {
             path="/"
             element={
               <Home
+                isShown={isShown}
+                setIsShown={setIsShown}
+                quantidadeArr={quantidadeArr}
+                setQuantidadeArr={setQuantidadeArr}
+                vazio={vazio}
+                setVazio={setVazio}
+                listaDeCompras={listaDeCompras}
+                setListaDeCompras={setListaDeCompras}
+              />
+            }
+          />
+          <Route
+            path="/camisas"
+            element={
+              <CamisasTime
+                isShown={isShown}
+                setIsShown={setIsShown}
+                quantidadeArr={quantidadeArr}
+                setQuantidadeArr={setQuantidadeArr}
+                vazio={vazio}
+                setVazio={setVazio}
+                listaDeCompras={listaDeCompras}
+                setListaDeCompras={setListaDeCompras}
+              />
+            }
+          />
+          <Route
+            path="/informatica"
+            element={
+              <Infomatica
                 isShown={isShown}
                 setIsShown={setIsShown}
                 quantidadeArr={quantidadeArr}

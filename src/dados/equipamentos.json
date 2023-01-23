@@ -1,66 +1,242 @@
 [
-    {
-      "title": "Placa-Mãe ASRock B450M",
-      "description": "Placa-mãe ASRock B450M Steel Legend AMD DDR4 Resistente como aço, verdadeira lenda a Steel Legend representa o estado filosófico da sólida durabilidade e irresistível estética. Construída ao redor das especificações e recursos mais exigentes, a série Steel Legend visa os usuários do dia a dia e entusiastas mainstream!Oferecendo uma forte gama de materiais/componentes para assegurar um desempenho estável e confiável.",
-      "photo": "/assets/equipamentos/asrock.png",
-      "price": 769.99,
-      "id": 1,
-      "quantidade": 1
-    },
-    {
-        "title": "SSD 960 GB Kingston A400",
-        "description": "SSD Kingston A400 960GB Sata Tempos incríveis de inicialização A unidade de estado sólido A400 da Kingston aumenta drasticamente a resposta do seu computador com tempos incríveis de inicialização, carregamento e transferência, comparados a discos rígidos mecânicos. Reforçado com uma controladora de última geração para velocidades de leitura e gravação de até 500MB/s e 450MB/s¹, este SSD é 10x mais rápido do que um disco rígido tradicional para melhor desempenho, resposta ultrarrápida em multitarefas e um computador mais rápido de modo geral. Também mais confiável e durável do que um disco rígido, o A400 é feito com memória Flash.",
-        "photo": "/assets/equipamentos/SSD960GBKingston.png",
-        "price": 445.99,
-        "id": 2,
-      "quantidade": 1
-      },
-      {
-        "title": "Fonte XPG Core Reactor, 850W, 80 Plus Gold Modular",
-        "description": "A XPG CORE REACTOR é uma fonte de alimentação modular 80 Plus Gold equipada com capacitores 100% japoneses. É confiável, eficiente em termos de energia, e facilita a criação de uma construção organizada.",
-        "photo": "/assets/equipamentos/FonteXPGCoreReactor.png",
-        "price": 699.99,
-        "id": 3,
-        "quantidade": 1
-      },
-      {
-        "title": "Placa de Vídeo Galax GeForce RTX 3060",
-        "description": "Como todas as GPUs GeForce RTX Series, a GeForce RT 3060 oferece suporte à trifeta das inovações em jogos da GeForce: NVIDIA DLSS, NVIDIA Reflex e NVIDIA Broadcast, que aceleram o desempenho e melhoram a qualidade da imagem.",
-        "photo": "/assets/equipamentos/GeForceRTX3060.png",
-        "price": 2359.99,
-        "id": 4,
-        "quantidade": 1
-      },
-      {
-        "title": "Water Cooler Rise Mode Gamer Black, RGB, 240mm, Preto - RM-WCB-02-RGB",
-        "description": "Controla a temperatura do seu processador, acompanha o ritmo e as exigências dos gamers mais intensos!",
-        "photo": "/assets/equipamentos/WaterCoolerRise.png",
-        "price": 479.99,
-        "id": 5,
-        "quantidade": 1
-      },
-      {
-        "title": "Placa de Video Gigabyte GeForce RTX 3060",
-        "description": "Placa de Vídeo Gigabyte GeForce RTX 3060 Gaming OC 12G (rev. 2.0) LHR Sistema de Refrigeração Windforce 3X: O sistema de resfriamento WINDFORCE 3X possui 3 ventiladores de lâmina exclusivos de 80 mm, rotação alternada, 3 tubos de calor de cobre composto com GPU de toque direto, ventilador ativo 3D e resfriamento de tela, que juntos fornecem dissipação de calor de alta eficiência.",
-        "photo": "/assets/equipamentos/GigabyteGeForceRTX3060.png",
-        "price": 2399.99,
-        "id": 6,
-        "quantidade": 1
-      },
-      {
-        "title": "Processador Intel Core i5-10400F, 2.9GHz (4.3GHz Max Turbo), Cache 12MB, 6 Núcleos, 12 Threads, LGA 1200 - BX8070110400F",
-        "description": "Processador Intel Core i5-10400F Os novos processadores Intel Core da 10ª Geração oferecem atualizações de desempenho incríveis para melhorar a produtividade e proporcionar entretenimento surpreendente, incluindo até 5,3 GHz, Intel® Wi-Fi 6 (Gig) tecnologia Thunderbolt™ 3, HDR 4K, otimização de sistema inteligentes e muito mais.",
-        "photo": "/assets/equipamentos/Corei5-10400F.png",
-        "price": 849.99,
-        "id": 7,
-        "quantidade": 1
-      },
-      {
-        "title": "Kit Gamer Motospeed White Storm - Teclado Mecânico CK82 RGB Switch Blue ANSI + Headset G750 RGB 7.1 USB + Mouse V50 4000DPI RGB",
-        "description": "Kit Gamer Motospeed White Storm - Teclado Mecânico CK82 RGB Switch Blue ANSI + Headset G750 RGB 7.1 USB + Mouse V50 4000DPI RGB",
-        "photo": "/assets/equipamentos/kitgamer.png",
-        "price": 849.99,
-        "id": 8,
-        "quantidade": 1
-      }
-  ]
+  {
+    "title": "Placa-Mãe ASRock B450M",
+    "description": "Placa-mãe ASRock B450M Steel Legend AMD DDR4 Resistente como aço, verdadeira lenda a Steel Legend representa o estado filosófico da sólida durabilidade e irresistível estética. Construída ao redor das especificações e recursos mais exigentes, a série Steel Legend visa os usuários do dia a dia e entusiastas mainstream!Oferecendo uma forte gama de materiais/componentes para assegurar um desempenho estável e confiável.",
+    "photo": "/assets/equipamentos/asrock.png",
+    "price": 769.99,
+    "id": 1,
+    "quantidade": 1
+  },
+  {
+    "title": "SSD 960 GB Kingston A400",
+    "description": "SSD Kingston A400 960GB Sata Tempos incríveis de inicialização A unidade de estado sólido A400 da Kingston aumenta drasticamente a resposta do seu computador com tempos incríveis de inicialização, carregamento e transferência, comparados a discos rígidos mecânicos. Reforçado com uma controladora de última geração para velocidades de leitura e gravação de até 500MB/s e 450MB/s¹, este SSD é 10x mais rápido do que um disco rígido tradicional para melhor desempenho, resposta ultrarrápida em multitarefas e um computador mais rápido de modo geral. Também mais confiável e durável do que um disco rígido, o A400 é feito com memória Flash.",
+    "photo": "/assets/equipamentos/SSD960GBKingston.png",
+    "price": 445.99,
+    "id": 2,
+    "quantidade": 1
+  },
+  {
+    "title": "Fonte XPG Core Reactor, 850W, 80 Plus Gold Modular",
+    "description": "A XPG CORE REACTOR é uma fonte de alimentação modular 80 Plus Gold equipada com capacitores 100% japoneses. É confiável, eficiente em termos de energia, e facilita a criação de uma construção organizada.",
+    "photo": "/assets/equipamentos/FonteXPGCoreReactor.png",
+    "price": 699.99,
+    "id": 3,
+    "quantidade": 1
+  },
+  {
+    "title": "Placa de Vídeo Galax GeForce RTX 3060",
+    "description": "Como todas as GPUs GeForce RTX Series, a GeForce RT 3060 oferece suporte à trifeta das inovações em jogos da GeForce: NVIDIA DLSS, NVIDIA Reflex e NVIDIA Broadcast, que aceleram o desempenho e melhoram a qualidade da imagem.",
+    "photo": "/assets/equipamentos/GeForceRTX3060.png",
+    "price": 2359.99,
+    "id": 4,
+    "quantidade": 1
+  },
+  {
+    "title": "Water Cooler Rise Mode Gamer Black, RGB, 240mm, Preto - RM-WCB-02-RGB",
+    "description": "Controla a temperatura do seu processador, acompanha o ritmo e as exigências dos gamers mais intensos!",
+    "photo": "/assets/equipamentos/WaterCoolerRise.png",
+    "price": 479.99,
+    "id": 5,
+    "quantidade": 1
+  },
+  {
+    "title": "Placa de Video Gigabyte GeForce RTX 3060",
+    "description": "Placa de Vídeo Gigabyte GeForce RTX 3060 Gaming OC 12G (rev. 2.0) LHR Sistema de Refrigeração Windforce 3X: O sistema de resfriamento WINDFORCE 3X possui 3 ventiladores de lâmina exclusivos de 80 mm, rotação alternada, 3 tubos de calor de cobre composto com GPU de toque direto, ventilador ativo 3D e resfriamento de tela, que juntos fornecem dissipação de calor de alta eficiência.",
+    "photo": "/assets/equipamentos/GigabyteGeForceRTX3060.png",
+    "price": 2399.99,
+    "id": 6,
+    "quantidade": 1
+  },
+  {
+    "title": "Processador Intel Core i5-10400F, 2.9GHz (4.3GHz Max Turbo), Cache 12MB, 6 Núcleos, 12 Threads, LGA 1200 - BX8070110400F",
+    "description": "Processador Intel Core i5-10400F Os novos processadores Intel Core da 10ª Geração oferecem atualizações de desempenho incríveis para melhorar a produtividade e proporcionar entretenimento surpreendente, incluindo até 5,3 GHz, Intel® Wi-Fi 6 (Gig) tecnologia Thunderbolt™ 3, HDR 4K, otimização de sistema inteligentes e muito mais.",
+    "photo": "/assets/equipamentos/Corei5-10400F.png",
+    "price": 849.99,
+    "id": 7,
+    "quantidade": 1
+  },
+  {
+    "title": "Kit Gamer Motospeed White Storm - Teclado Mecânico CK82 RGB Switch Blue ANSI + Headset G750 RGB 7.1 USB + Mouse V50 4000DPI RGB",
+    "description": "Kit Gamer Motospeed White Storm - Teclado Mecânico CK82 RGB Switch Blue ANSI + Headset G750 RGB 7.1 USB + Mouse V50 4000DPI RGB",
+    "photo": "/assets/equipamentos/kitgamer.png",
+    "price": 849.99,
+    "id": 8,
+    "quantidade": 1
+  },
+  {
+    "title": "Headset Gamer Fallen Morcego Vermelho",
+    "description": "O Headset Morcego, vem com alto-falantes de alta qualidade e Surround Virtual 7.1, proporcionando uma experiência única ao jogador. É a imersão ao jogo em um novo patamar. Construído em alumínio industrial, garante durabilidade e leveza. BAIXE O SOFTWAREACESSE O SITE DO MORCEGOCONFORTOA almofada de ouvido tem um tecido em malha que ajuda na respiração da pele, além de ser super macio e confortável com material de alta qualidade para uma maior duração. O design ergonômico foi projetado para exercer a menor pressão possível ao jogador, tornando mais agradável o uso contínuo do equipamento. Outro diferencial é um par de almofadas extras para ser usado quando necessário.ALTO-FALANTESO Morcego possui Surround Virtual 7.1 com drivers de 53mm, colaborando para uma melhor nitidez sonora e ambientação, possibilitando o reconhecimento de passos ou da direção dos tiros em questão de segundos! Alta precisão, performance e durabilidade. Aprovado em jogos de FPS, MMO, MOBA e RTS.",
+    "photo": "/assets/equipamentos/morcego1.png",
+    "price": 399.00,
+    "id": 9,
+    "quantidade": 1
+  },
+  {
+    "title": "Headset Gamer Fallen Morcego Preto",
+    "description": "O Headset Morcego, vem com alto-falantes de alta qualidade e Surround Virtual 7.1, proporcionando uma experiência única ao jogador. É a imersão ao jogo em um novo patamar. Construído em alumínio industrial, garante durabilidade e leveza. BAIXE O SOFTWAREACESSE O SITE DO MORCEGOCONFORTOA almofada de ouvido tem um tecido em malha que ajuda na respiração da pele, além de ser super macio e confortável com material de alta qualidade para uma maior duração. O design ergonômico foi projetado para exercer a menor pressão possível ao jogador, tornando mais agradável o uso contínuo do equipamento. Outro diferencial é um par de almofadas extras para ser usado quando necessário.ALTO-FALANTESO Morcego possui Surround Virtual 7.1 com drivers de 53mm, colaborando para uma melhor nitidez sonora e ambientação, possibilitando o reconhecimento de passos ou da direção dos tiros em questão de segundos! Alta precisão, performance e durabilidade. Aprovado em jogos de FPS, MMO, MOBA e RTS.",
+    "photo": "/assets/equipamentos/morcego2.png",
+    "price": 399.00,
+    "id": 10,
+    "quantidade": 1
+  },
+  {
+    "title": "Headset Gamer Fallen Morcego Rosa",
+    "description": "O Headset Morcego, vem com alto-falantes de alta qualidade e Surround Virtual 7.1, proporcionando uma experiência única ao jogador. É a imersão ao jogo em um novo patamar. Construído em alumínio industrial, garante durabilidade e leveza. BAIXE O SOFTWAREACESSE O SITE DO MORCEGOCONFORTOA almofada de ouvido tem um tecido em malha que ajuda na respiração da pele, além de ser super macio e confortável com material de alta qualidade para uma maior duração. O design ergonômico foi projetado para exercer a menor pressão possível ao jogador, tornando mais agradável o uso contínuo do equipamento. Outro diferencial é um par de almofadas extras para ser usado quando necessário.ALTO-FALANTESO Morcego possui Surround Virtual 7.1 com drivers de 53mm, colaborando para uma melhor nitidez sonora e ambientação, possibilitando o reconhecimento de passos ou da direção dos tiros em questão de segundos! Alta precisão, performance e durabilidade. Aprovado em jogos de FPS, MMO, MOBA e RTS.",
+    "photo": "/assets/equipamentos/morcego3.png",
+    "price": 399.00,
+    "id": 11,
+    "quantidade": 1
+  },
+  {
+    "title": "Mouse Gamer Ultraleve Fallen F75 Black",
+    "description": "Qualidade e alta performance em apenas 75g Com apenas 75g, o F75 é muito mais leve que os mouses tradicionais, possibilitando o uso durante longas horas de jogatina causando menor cansaço no braço e reduzindo as chances de lesões por movimentos repetitivos, Mouse ambidestro ideal para todos os tipos de pegadas. Com um diferenciado design em colmeia, o F75 tem um shape ambidestro e mais compacto, garantindo conforto total para pegadas fingertip, palm e claw e pode ser usado com todos os tipos de pegada. Sua leveza possibilita movimentos suaves e seguros sem perder a precisão.",
+    "photo": "/assets/equipamentos/f75Black.png",
+    "price": 299.00,
+    "id": 12,
+    "quantidade": 1
+  },
+  {
+    "title": "Mouse Gamer Fallen Pantera Eco Preto",
+    "description": "Um mouse custo-benefício com design ergonômico para você jogar com mais conforto, em uma experiência de alto nível para não errar o spray.",
+    "photo": "/assets/equipamentos/panteraEco.png",
+    "price": 149.00,
+    "id": 13,
+    "quantidade": 1
+  },
+  {
+    "title": "Mousepad Gamer Fallen Cs:go Ct/Tr - Speed+ Estendido",
+    "description": "ILUSTRAÇÕES EXCLUSIVAS, COM O TEMA DE COUNTER STRIKE: GLOBAL    OFFENSIVE, FRUTO DA PARCERIA FALLEN STORE X VALVE.",
+    "photo": "/assets/equipamentos/mp1.png",
+    "price": 165.56,
+    "id": 14,
+    "quantidade": 1
+  },
+  {
+    "title": "Mousepad Gamer Fallen Cs:go Medusa Rgb - Speed+ Estendido",
+    "description": "ESTILO DENTRO E FORA DO JOGO, MOUSEPADS BASEADOS NO NOSSO JOGUINHO TÃO AMADO. DAS DIFERENÇAS ENTRE CT E TR, PASSANDO PELAS GÍRIAS E FINALIZANDO COM 3 SKINS QUERIDINHAS.",
+    "photo": "/assets/equipamentos/mp2.png",
+    "price": 221.11,
+    "id": 15,
+    "quantidade": 1
+  },
+  {
+    "title": "Mousepad Gamer Fallen Cs:go Ezpz - Speed+ Grande",
+    "description": "ESTILO DENTRO E FORA DO JOGO, MOUSEPADS BASEADOS NO NOSSO JOGUINHO TÃO AMADO. DAS DIFERENÇAS ENTRE CT E TR, PASSANDO PELAS GÍRIAS E FINALIZANDO COM 3 SKINS QUERIDINHAS.",
+    "photo": "/assets/equipamentos/mp3.png",
+    "price": 110.00,
+    "id": 16,
+    "quantidade": 1
+  },
+  {
+    "title": "Mousepad Gamer Fallen Dota2 Omnislash Rgb - Speed++ Grande",
+    "description": "ESTILO DENTRO E FORA DO JOGO, MOUSEPADS BASEADOS NO NOSSO JOGUINHO TÃO AMADO. DAS DIFERENÇAS ENTRE CT E TR, PASSANDO PELAS GÍRIAS E FINALIZANDO COM 3 SKINS QUERIDINHAS.",
+    "photo": "/assets/equipamentos/mp4.png",
+    "price": 171.11,
+    "id": 17,
+    "quantidade": 1
+  },
+  {
+    "title": "PC Gamer Fácil Intel Core I5, 16GB, SSD 240GB, Geforce GT 710 2GB, Windows 10 + Monitor 19 + Kit Gamer",
+    "description": "PC Gamer Fácil Completo Intel Core I5, 16GB, SSD 240GB, Geforce 2GB, Monitor 19 - Kit Gamer, Teclado, Mouse, Headset",
+    "photo": "/assets/equipamentos/pcCorei5GT710.png",
+    "price": 2959.00,
+    "id": 18,
+    "quantidade": 1
+  },
+  {
+    "title": "Pc Gamer Completo, AMD6-core Cpu 3.8Ghz 8GB, Placa De Vídeo Radeon R5 2GB, SSD 240GB, Kit Gamer Skill, Monitor HDMI Led 19.5 Polegadas",
+    "description": "Elaborado para você que deseja iniciar a sua jornada gamer mas não dispõe do orçamento necessário para adquirir um PC Gamer de alto custo agora.Essa linha visa atender pessoas que querem jogar games casuais, como por exemplo League of Legends, Fallout, Age of empires, Team fortress, CS:GO, etc.Através da saída HDMI você poderá usufruir de boas resoluções para executar os seus jogos. Além disso curta um som de alta qualidade durante os jogos com a sua placa de som HD de 5.1 canais.Você ainda conta com um Gabinete Gamer de última geração, lateral transparente e conexões frontais.Uma grande vantagem é que TODOS, sim TODOS os computadores da série Casual contam com um SSD instalado. Isso garante a vocês um carregamento mais rápido do sistema e melhor desempenho nos jogos, pois SSDs podem ser até 10x mais rápidos que os HDs convencionais.O processador multi core da AMD A6 7480 conta com nada mais que 6 núcleos computacionais, além de placa de vídeo Radeon R5 de até 2GB.Com o excelente clock de 3.8Ghz, você está com o desempenho que precisa garantido para as suas partidas.",
+    "photo": "/assets/equipamentos/pcAMDr5.png",
+    "price": 2349.00,
+    "id": 19,
+    "quantidade": 1
+  },
+  {
+    "title": "PC Gamer Completo Fácil I7, 16GB, GTX 1050TI 4GB, 1TB, Windows 10, Preto + Monitor 21.5 Polegadas+ Kit Gamer Teclado, Mouse E Headset, Fonte 500W",
+    "description": "Fácil Computadores - Com 30 anos de excelência atuando no Brasil, criamos soluções completas na área de informática. Nossos computadores são equipados com os mais recentes processadores de alta velocidade, maximizando sua produção.",
+    "photo": "/assets/equipamentos/pcfacili7gtx050ti.png",
+    "price": 4559.00,
+    "id": 20,
+    "quantidade": 1
+  },
+  {
+    "title": "PC Gamer Fácil, Intel Core I5 11400F, 16GB DDR4, RTX 3050 8GB GDDR6, SSD 480GB, Windows 10 Trial, Fonte 750W",
+    "description": "Fácil Computadores - Com 30 anos de excelência atuando no Brasil, criamos soluções completas na área de informática. Nossos computadores são equipados com os mais recentes processadores de alta velocidade, maximizando sua produção.",
+    "photo": "/assets/equipamentos/pci511400f.png",
+    "price": 5539.00,
+    "id": 21,
+    "quantidade": 1
+  },
+  {
+    "title": "PC Gamer Fácil AMD Ryzen 5 5600g Radeon Vega 7 Graphics, 16GB DDR4 3000mhz, SSD 480GB, Fonte 500W, Windows, Preto",
+    "description": "PC Gamer Fácil AMD Ryzen 5 5600g Radeon Vega 7 Graphics, 16GB DDR4 2666mhz, SSD 480GB, Fonte 500W, Windows, Preto",
+    "photo": "/assets/equipamentos/pcryzen5radeon.png",
+    "price": 3443.00,
+    "id": 22,
+    "quantidade": 1
+  },
+  {
+    "title": "Cadeira Gamer Husky Gaming Tempest 700, Preto, Com Almofadas, Descanso Para Pernas Retrátil, Reclinável - HGMA074",
+    "description": "Conheça a cadeira Husky Gaming Tempest 700! Tenha horas incríveis desfrutando seu gameplay de maneira confortável e aconchegante! Feito com espuma de altíssima densidade e PU, a Cadeira Husky Gaming Tempest 700 possui descanso para os pés, ideal para aquela pausa entre um jogo e outro! Além do design moderno e robusto, a cadeira proporciona ótima performance nas partidas devido a sensação de conforto que é convertida em foco e concentração, tudo que um gamer de verdade precisa para ser o melhor! ",
+    "photo": "/assets/equipamentos/cadeiraHusky.png",
+    "price": 1157.00,
+    "id": 23,
+    "quantidade": 1
+  },
+  {
+    "title": "Cadeira Gamer Mymax MX7, Suporta Até 150kg, Giratória, Preto E Vermelho",
+    "description": "A Cadeira Gamer MX7 é a mais recomendada para gamers, pois necessitam de uma cadeira ergonômica e confortável. Escolhida também por profissionais que passam muito tempo sentado em frente ao computador. Com design único que arremete aos bancos dos carros esportivos, é destaque no ambiente que for posicionada. Construída em materiais premium, superfície em tecido sintético e estrutura metálica garante durabilidade ao produto, além possuir almofadas para manter seu corpo sempre em contato com a cadeira. Pés giratórios de 68 cm de diâmetro e rodinhas, contribuem para estabilidade e praticidade da Cadeira Gamer MX7.",
+    "photo": "/assets/equipamentos/cadeiraMymax.png",
+    "price": 799.00,
+    "id": 24,
+    "quantidade": 1
+  },
+  {
+    "title": "Mouse Gamer Redragon Cobra, Chroma RGB, 12400DPI, 7 Botões, Preto - M711 V2",
+    "description": "O Mouse Gamer Redragon Cobra, possui sensor PIXART 3327 para Alta Performance (20 G / 100 IPS) e seu sistema é de Iluminação RGB Redragon Chroma Mk.II (7 Diferentes Modos de Iluminação). Possui Polling Rate de 1000hz (Tempo de Resposta Ajustável via Software de 1/2/4/8ms), com 8 Botões Programáveis e 2 Botões laterais para funções / atalhos, macros, etc. Tudo isso com 130 gramas, leve e preciso para aquela jogada especial.",
+    "photo": "/assets/equipamentos/redragonCobra.png",
+    "price": 135.00,
+    "id": 25,
+    "quantidade": 1
+  },
+  {
+    "title": "Teclado Mecânico Gamer HyperX Alloy MKW100, RGB, Switch Red, Full Size, Layout US",
+    "description": "Com switches mecânicos à prova de poeira com classificação de até 50 milhões de toques, você usufruirá a confiabilidade duradoura e silenciosa do Alloy MKW100. O conector USB em metal dourado impede a corrosão, enquanto a trança de tecido aumenta a longevidade do cabo para anos de uso confiável. Personalize o show de luz RGB do Alloy MKW100 com o poderoso software HyperX NGENUITY fácil de usar.",
+    "photo": "/assets/equipamentos/HyperXAlloy.png",
+    "price": 352.00,
+    "id": 26,
+    "quantidade": 1
+  },
+  {
+    "title": "Mouse Gamer Warrior Gunter, LED Rainbow, 6400 DPI, 6 Botões, Preto ",
+    "description": "Mouse Gamer Warrior Gunter Possui conector banhado a ouro e cabo de 1,8m com malha de nylon, além de 6 botões configuráveis por software.",
+    "photo": "/assets/equipamentos/WarriorGunter.png",
+    "price": 37.64,
+    "id": 27,
+    "quantidade": 1
+  },
+  {
+    "title": "Suporte Octoo UpTable p/ Notebook Preto Fosco",
+    "description": "O suporte ergonômico UpTable, soluciona o grande problema do desconforto ao trabalhar com o notebook em uma superfície plana.",
+    "photo": "/assets/equipamentos/suporteOctoo.png",
+    "price": 57.64,
+    "id": 28,
+    "quantidade": 1
+  },
+  {
+    "title": "Kit Gamer Redragon Teclado Mecânico Kumara, RGB, Switch Outemu Blue, PT, Branco + Mouse Cobra M711, Chroma, 10000DPI, Branco - S118W",
+    "description": "Kit Gamer Redragon - Teclado Mecânico Kumara, RGB, Switch Outemu Blue, PT, Branco + Mouse Cobra M711 Redragon Kumara RGB, a linha de Teclados Mecânicos mais vendida em todo o Brasil. Uma união fantástica de Design, Performance e Durabilidade para seu Setup, com o Estilo Redragon que você já ama e conhece.",
+    "photo": "/assets/equipamentos/RedragonKumara.png",
+    "price": 352.93,
+    "id": 29,
+    "quantidade": 1
+  },
+  {
+    "title": "Console Sony PlayStation 5 Edição Digital + FIFA 23",
+    "description": "Experimente o carregamento extremamente rápido do SSD de ultra-velocidade, uma imersão mais profunda com suporte à resposta tátil, gatilhos adaptáveis e áudio 3D. Além de uma geração totalmente nova de jogos incríveis PlayStation®. PS5? Edição Digital é uma versão totalmente digital do console PS5? sem unidade de disco. Inicie sua sessão na conta da PlayStation Network e vá à PlayStation Store para comprar e baixar jogos.",
+    "photo": "/assets/equipamentos/ps5.png",
+    "price": 4299.90,
+    "id": 30,
+    "quantidade": 1
+  } 
+]

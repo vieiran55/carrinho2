@@ -1,5 +1,5 @@
 .modal {
-  @apply absolute  w-[20rem] bg-red-600 self-end mt-16 flex items-center flex-col justify-center opacity-90 drop-shadow-4xl rounded-lg rounded-tr-none drop-shadow-2xl z-50;
+  @apply absolute animate-fadeinDown w-[20rem] bg-red-600 self-end mt-16 flex items-center flex-col justify-center opacity-90 drop-shadow-4xl rounded-lg rounded-tr-none z-50;
   .texto {
     @apply text-2xl text-white font-inter;
   }
