@@ -3,6 +3,7 @@ import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { IOpcoes } from "interfaces/IOpcoes";
+import classNames from "classnames";
 
 interface Props {
   title: string;
@@ -68,25 +69,7 @@ export default function GamerItens(props: Props) {
     return item.id;
   });
 
-  // const criaElmento = () => {
-  //   setListaDeCompras((listaDeCompras) => [
-  //     ...listaDeCompras,
-  //     card(id, title, photo, price, quantidadeArr),
-  //   ]);
-  //   setQuantidadeArr(quantidadeArr + 1);
-  // };
-
   const index = listaDeCompras.findIndex((user) => user.id === id);
-
-  //   if (hasDuplicates(arr)) {
-  //     setTemDuplicado(true);
-  //     console.log("Duplicate elements found.");
-  //     console.log(temDuplicado);
-  //   } else {
-  //     console.log("No Duplicates found.");
-  //     setTemDuplicado(false);
-  //     console.log(temDuplicado);
-  //   }
 
   const recarrega1 = () => {
     setIsShown(false);
@@ -112,72 +95,24 @@ export default function GamerItens(props: Props) {
     }
   };
 
-  // const adicionarItemNoCarrinho = () => {
-  //   if(quantidadeArr === 1){
-  //     setListaDeCompras((listaDeCompras) => [
-  //       ...listaDeCompras,
-  //       card(id, title, photo, price, quantidadeArr),
-  //     ]);
-  //     setQuantidadeArr(quantidadeArr + 1);
-  //     console.log(listaDeCompras);
-  //     setEfeito(true);
-  //     setVazio(true);
-  //   }else{
-  //     listaDeCompras[index].quantidade++;
-  //     console.log(listaDeCompras);
-  //   }
-  // };
-
-  // const verificarIguais = () => {
-  //   if (hasDuplicates(arr)) {
-  //     console.log("Duplicate elements found.");
-  //   } else {
-  //     console.log("No Duplicates found.");
-  //   }
-  //   setQuantidade(quantidade + 1);
-  // };
-
-  // useEffect(() => {
-  //   if (hasDuplicates(arr)) {
-  //     setTemDuplicado(true);
-  //     console.log("Estou no use effect, tem duplicidades.");
-  //     console.log(`Estou no use effect ${temDuplicado}`);
-  //   } else {
-  //     console.log("Estou no use effect, sem duplicidades.");
-  //     setTemDuplicado(false);
-  //     console.log(`Estou no use effect ${temDuplicado}`);
-  //   }
-  // });
-  //
-
-  // const adicionarItemNoCarrinho = () => {
-  //   console.log(listaDeCompras);
-  //   setQuantidade(quantidade + 1);
-  //   setListaDeCompras((listaDeCompras) => [
-  //     ...listaDeCompras,
-  //     card(id, title, photo, price, quantidade)
-  //   ]);
-  //   setEfeito(true);
-  //   setVazio(true);
-  //   console.log(listaDeCompras);
-  // };
-
   return (
     <>
-      <div className={styles.item}>
+      <div className={classNames({ [styles.item]: true, [styles.bttn]:true })}>
         <div className={styles.item__titulo}>
-          <h2>{title}</h2>
+          <h2>{title.substring(0, 50)}</h2>
         </div>
         <div className={styles.item__imagem}>
           <p>
             <img src={`${photo}`} alt={title} />
-            {`${description.substring(0, 300)}...`}
+            {/* {`${description.substring(0, 300)}...`} */}
           </p>
         </div>
         <div className={styles.item__SetordePreco}>
           <div className={styles.item__valor}>
-            {" "}
-            R$ {price.toFixed(2)}
+            <h3>
+              {" "}
+              R$ {price.toFixed(2)}
+            </h3>
             <button
               className={styles.item__BotaoComprar}
               // onClick={() => navigate("/finalcompra")}

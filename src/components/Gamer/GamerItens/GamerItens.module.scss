@@ -2,15 +2,21 @@
 @import "styles/breakpoints";
 
 .item {
-    align-items: center;
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    max-width: 320px;
-    background-color: $grey;
+  @apply drop-shadow-2xl;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1em 1.5em;
+  max-width: 320px;
+  background-color: $grey;
+  text-transform: uppercase;
+  z-index: -1;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; 
     @media (min-width: $mobile) {
-        height: 450px;
+        height: 390px;
       }
       @media (min-width: $desktop_md) {
       }
@@ -18,8 +24,8 @@
       img {
         float: left;
         border-radius: 8px;
-        width: 130px;
-        height: 130px;
+        width: 190px;
+        height: 190px;
         background-size:cover;
         margin-right: 5px;
       }
@@ -54,7 +60,6 @@
         text-align: center;
         font-size: 1rem;
         font-weight: bold;
-        margin-bottom: 20px;
       }
     }
     &__valor {
@@ -63,7 +68,7 @@
         display: flex;
         font-size: 1.75rem;
         font-weight: bold;
-        color: $red;
+        color: black;
         width: 100%;
     }
   }
@@ -92,4 +97,48 @@
         @apply drop-shadow-2xl
       }
     }
+  }
+
+  .bttn {
+    font-size: 17px;
+    color: black;
+    position: relative;
+    transition: 0.5s ease;
+    background-image: url(../../../assets/blobtest2.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+  
+  .bttn:hover {
+    color: white;
+    transition-delay: 0.5s;
+    z-index: 1000;
+  }
+  
+  .bttn:hover::before {
+    width: 100%;
+    
+  }
+  
+  .bttn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #6493eb;
+    transition: 0.4s ease;
+    z-index: -1;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; 
+    background-image: url(../../../assets/blob2.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+  
+  .bttn:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: aliceblue;
   }

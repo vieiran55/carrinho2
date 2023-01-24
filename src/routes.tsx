@@ -5,7 +5,8 @@ import { IOpcoes } from "interfaces/IOpcoes";
 import CamisasTime from "pages/CamisasTime";
 import FinalCompra from "pages/FinalCompra";
 import Home from "pages/Home";
-import Infomatica from "pages/Informatica";
+import Tecnologia from "pages/Tecnologia";
+import Tenis from "pages/Tenis";
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import estilos from "./styles/Routes.module.scss";
@@ -72,9 +73,24 @@ export default function AppRouter() {
             }
           />
           <Route
-            path="/informatica"
+            path="/tecnologia"
             element={
-              <Infomatica
+              <Tecnologia
+                isShown={isShown}
+                setIsShown={setIsShown}
+                quantidadeArr={quantidadeArr}
+                setQuantidadeArr={setQuantidadeArr}
+                vazio={vazio}
+                setVazio={setVazio}
+                listaDeCompras={listaDeCompras}
+                setListaDeCompras={setListaDeCompras}
+              />
+            }
+          />
+          <Route
+            path="/tenis"
+            element={
+              <Tenis
                 isShown={isShown}
                 setIsShown={setIsShown}
                 quantidadeArr={quantidadeArr}

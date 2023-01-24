@@ -1,8 +1,9 @@
 import Item from "components/Item";
 import { IOpcoes } from "interfaces/IOpcoes";
-import estilos from "./Home.module.scss";
+import estilos from "./Tecnologia.module.scss";
 import { BsArrowUpCircleFill } from "react-icons/bs";
-import { Link, useNavigate } from "react-router-dom";
+import Camisas from "components/Camisas";
+import Gamer from "components/Gamer";
 
 interface Props {
   listaDeCompras: IOpcoes[];
@@ -15,7 +16,7 @@ interface Props {
   setIsShown: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function Home(props: Props) {
+export default function Tecnologia(props: Props){
   const {
     listaDeCompras,
     setListaDeCompras,
@@ -24,7 +25,7 @@ export default function Home(props: Props) {
     quantidadeArr,
     setQuantidadeArr,
     isShown,
-    setIsShown,
+    setIsShown
   } = props;
 
   const topo = () => {
@@ -33,29 +34,21 @@ export default function Home(props: Props) {
       behavior: "smooth",
     });
   };
-
-  const navigate = useNavigate();
-
-  return (
+  return(
     <main className={estilos.corpo}>
-
-      <Link className={estilos.banner} to={"/tecnologia"}>
-        <div className={estilos.banner__tecnologia}>
-          <h1 className={estilos.banner__titulo}>Tecnologia</h1>
-        </div>
-      </Link>
-
-      <Link className={estilos.banner} to={"/camisas"}>
-        <div className={estilos.banner__camisas}>
-          <h1 className={estilos.banner__titulo}>Camisas</h1>
-        </div>
-      </Link>
-
-      <Link className={estilos.banner} to={"/tenis"}>
-        <div className={estilos.banner__tenis}>
-          <h1 className={estilos.banner__titulo}>Tênis</h1>
-        </div>
-      </Link>
+      <Gamer
+        isShown={isShown}
+        setIsShown={setIsShown}
+        quantidadeArr={quantidadeArr}
+        setQuantidadeArr={setQuantidadeArr}
+        vazio={vazio}
+        setVazio={setVazio}
+        listaDeCompras={listaDeCompras}
+        setListaDeCompras={setListaDeCompras}
+      />
+      <button className={estilos.botoes__tipo__up} onClick={topo}>
+        <BsArrowUpCircleFill className={estilos.seta} />
+      </button>
     </main>
   );
 }

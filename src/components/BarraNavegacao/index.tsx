@@ -37,11 +37,14 @@ export default function BarraNavegacao(props: Props) {
         <Link className={estilos.links__itens}  to={"/"} >
         Home
         </Link>
-        <Link className={estilos.links__itens}  to={"/informatica"} >
-        Informática
+        <Link className={estilos.links__itens}  to={"/tecnologia"} >
+        Tecnologia
         </Link>
         <Link className={estilos.links__itens}  to={"/camisas"} >
         Camisas
+        </Link>
+        <Link className={estilos.links__itens}  to={"/tenis"} >
+        Tenis
         </Link>
       </div>
       <div className={estilos.carrinho}  onClick={abrirCarrinho}>

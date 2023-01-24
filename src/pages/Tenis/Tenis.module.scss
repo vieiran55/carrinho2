@@ -1,0 +1,14 @@
+@import 'styles/variaveis';
+@import "styles/breakpoints";
+
+.corpo{
+  @apply bg-gradient-to-r from-cyan-500 to-blue-500 flex flex-col justify-center items-center;
+}
+
+.botoes__tipo__up{
+  @apply animate-bounce;
+}
+
+.seta{
+  @apply fill-red-700 animate-waving-hand h-8 w-8;
+}

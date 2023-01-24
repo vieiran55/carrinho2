@@ -1,0 +1,202 @@
+[
+  {
+    "title": "TÊNIS CORRIDA ADIDAS 4DFWD 2",
+    "description": "TÊNIS CORRIDA ADIDAS 4DFWD 2",
+    "photo": "/assets/tenis/4ddfwd2.png",
+    "price": 1899.99,
+    "id": 201,
+    "quantidade": 1
+  },
+  {
+    "title": "Tênis de Basquete Masculino Under Armour Curry 9",
+    "description": "Tênis de Basquete Masculino Under Armour Curry 9",
+    "photo": "/assets/tenis/curry9.png",
+    "price": 1099.99,
+    "id": 202,
+    "quantidade": 1
+  },
+  {
+    "title": "Tênis Nike Downshifter 12 Masculino",
+    "description": "Tênis Nike Downshifter 12 Masculino",
+    "photo": "/assets/tenis/down12.png",
+    "price": 499.99,
+    "id": 203,
+    "quantidade": 1
+  },
+  {
+    "title": "Tênis Nike Air Max Excee Masculino",
+    "description": "Tênis Nike Air Max Excee Masculino",
+    "photo": "/assets/tenis/excee.png",
+    "price": 749.99,
+    "id": 204,
+    "quantidade": 1
+  },
+  {
+    "title": "Tênis Nike Air Force 1 Mid 07 LV8 Next Nature Masculino",
+    "description": "Tênis Nike Air Force 1 Mid 07 LV8 Next Nature Masculino",
+    "photo": "/assets/tenis/firce1.png",
+    "price": 999.99,
+    "id": 205,
+    "quantidade": 1
+  },
+  {
+    "title": "Tênis de Corrida Feminino Under Armour Flow Velociti",
+    "description": "Tênis de Corrida Feminino Under Armour Flow Velociti",
+    "photo": "/assets/tenis/flowvelociti.png",
+    "price": 1199.99,
+    "id": 206,
+    "quantidade": 1
+  },
+  {
+    "title": "Tênis Nike React Infinity Run Flyknit 3 Masculino",
+    "description": "Tênis Nike React Infinity Run Flyknit 3 Masculino",
+    "photo": "/assets/tenis/flynknit.png",
+    "price": 999.99,
+    "id": 207,
+    "quantidade": 1
+  },
+  {
+    "title": "Tênis Air Force 1 '07 Premium Masculino",
+    "description": "Tênis Air Force 1 '07 Premium Masculino",
+    "photo": "/assets/tenis/force107.png",
+    "price": 899.99,
+    "id": 208,
+    "quantidade": 1
+  },
+  {
+    "title": "TÊNIS FORUM LOW",
+    "description": "TÊNIS FORUM LOW",
+    "photo": "/assets/tenis/ForumLow.png",
+    "price": 699.99,
+    "id": 209,
+    "quantidade": 1
+  },
+  {
+    "title": "Tênis de Corrida Feminino Under Armour HOVR Phantom",
+    "description": "Tênis de Corrida Feminino Under Armour HOVR Phantom",
+    "photo": "/assets/tenis/hoverPhanton.png",
+    "price": 799.99,
+    "id": 120,
+    "quantidade": 1
+  },
+  {
+    "title": "Tênis Nike KD Trey 5 X Masculino",
+    "description": "Tênis Nike KD Trey 5 X Masculino",
+    "photo": "/assets/tenis/kdtrey5.png",
+    "price": 749.99,
+    "id": 111,
+    "quantidade": 1
+  },
+  {
+    "title": "Tênis Nike Air Max Alpha Trainer 5 Masculino",
+    "description": "Tênis Nike Air Max Alpha Trainer 5 Masculino",
+    "photo": "/assets/tenis/maxAlpha.png",
+    "price": 699.99,
+    "id": 112,
+    "quantidade": 1
+  },
+  {
+    "title": "Tênis Nike Jordan One Take 4",
+    "description": "Tênis Nike Jordan One Take 4",
+    "photo": "/assets/tenis/oneTake4.png",
+    "price": 999.99,
+    "id": 113,
+    "quantidade": 1
+  },
+  {
+    "title": "Tênis Nike React Pegasus Trail 4 Masculino",
+    "description": "Tênis Nike React Pegasus Trail 4 Masculino",
+    "photo": "/assets/tenis/pegasus.png",
+    "price": 1199.99,
+    "id": 114,
+    "quantidade": 1
+  },
+  {
+    "title": "Tênis de Treino Feminino Under Armour Project Rock 5",
+    "description": "Tênis de Treino Feminino Under Armour Project Rock 5",
+    "photo": "/assets/tenis/prock5.png",
+    "price": 999.99,
+    "id": 115,
+    "quantidade": 1
+  },
+  {
+    "title": "Tênis de Treino Masculino Under Armour Project Rock 5 D",
+    "description": "Tênis de Treino Masculino Under Armour Project Rock 5 D",
+    "photo": "/assets/tenis/procket5M.png",
+    "price": 999.99,
+    "id": 116,
+    "quantidade": 1
+  },
+  {
+    "title": "Tênis Nike React Infinity Run Flyknit 3 Masculino",
+    "description": "Tênis Nike React Infinity Run Flyknit 3 Masculino",
+    "photo": "/assets/tenis/reactrun3.png",
+    "price": 999.99,
+    "id": 117,
+    "quantidade": 1
+  },
+  {
+    "title": "Tênis Nike Revolution 6 Next Nature Masculino",
+    "description": "Tênis Nike Revolution 6 Next Nature Masculino",
+    "photo": "/assets/tenis/rev6.png",
+    "price": 399.99,
+    "id": 118,
+    "quantidade": 1
+  },
+  {
+    "title": "Tênis de Treino Masculino Under Armour Hovr Rise 4BLK",
+    "description": "Tênis de Treino Masculino Under Armour Hovr Rise 4BLK",
+    "photo": "/assets/tenis/rise.png",
+    "price": 899.99,
+    "id": 119,
+    "quantidade": 1
+  },
+  {
+    "title": "Tênis de Corrida Feminino Under Armour Hovr Sonic 5",
+    "description": "Tênis de Corrida Feminino Under Armour Hovr Sonic 5",
+    "photo": "/assets/tenis/sonic5.png",
+    "price": 899.99,
+    "id": 120,
+    "quantidade": 1
+  },
+  {
+    "title": "Tênis Nike SuperRep Go 3 Next Nature Flyknit Masculino",
+    "description": "Tênis Nike SuperRep Go 3 Next Nature Flyknit Masculino",
+    "photo": "/assets/tenis/superrep3.png",
+    "price": 899.99,
+    "id": 121,
+    "quantidade": 1
+  },
+  {
+    "title": "TÊNIS SUPERSTAR",
+    "description": "TÊNIS SUPERSTAR",
+    "photo": "/assets/tenis/tenisSuperstar.png",
+    "price": 549.99,
+    "id": 122,
+    "quantidade": 1
+  },
+  {
+    "title": "Tênis de Treino Unissex Under Armour Tribase Cross Quiron",
+    "description": "Tênis de Treino Unissex Under Armour Tribase Cross Quiron",
+    "photo": "/assets/tenis/tribasecross.png",
+    "price": 499.99,
+    "id": 123,
+    "quantidade": 1
+  },
+  {
+    "title": "TÊNIS ULTRA 4D",
+    "description": "TÊNIS ULTRA 4D",
+    "photo": "/assets/tenis/ultra4d.png",
+    "price": 1499.99,
+    "id": 124,
+    "quantidade": 1
+  },
+  {
+    "title": "TÊNIS ULTRABOOST 22",
+    "description": "TÊNIS ULTRABOOST 22",
+    "photo": "/assets/tenis/ultraboost22.png",
+    "price": 1199.99,
+    "id": 125,
+    "quantidade": 1
+  }
+]

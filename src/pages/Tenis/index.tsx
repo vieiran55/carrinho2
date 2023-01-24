@@ -1,9 +1,9 @@
 import Item from "components/Item";
 import { IOpcoes } from "interfaces/IOpcoes";
-import estilos from "./Informatica.module.scss";
+import estilos from "./Tenis.module.scss";
 import { BsArrowUpCircleFill } from "react-icons/bs";
 import Camisas from "components/Camisas";
-import Gamer from "components/Gamer";
+import TenisItem from "components/TenisItem";
 
 interface Props {
   listaDeCompras: IOpcoes[];
@@ -16,7 +16,7 @@ interface Props {
   setIsShown: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function Infomatica(props: Props){
+export default function Tenis(props: Props){
   const {
     listaDeCompras,
     setListaDeCompras,
@@ -36,7 +36,7 @@ export default function Infomatica(props: Props){
   };
   return(
     <main className={estilos.corpo}>
-      <Gamer
+      <TenisItem
         isShown={isShown}
         setIsShown={setIsShown}
         quantidadeArr={quantidadeArr}

@@ -12,3 +12,124 @@
 .seta{
   @apply fill-red-700 animate-waving-hand h-8 w-8;
 }
+
+.banner{
+  @apply w-full h-[22em] m-4 flex flex-col justify-center;
+  &__titulo{
+    @apply text-[4em] text-center text-gray-200;
+  }
+}
+
+// .banner__tecnologia{
+//   
+// }
+
+// .banner__camisas{
+//   background-image: url("../../assets/banner/camisasLarge.jpg");
+//   background-repeat: no-repeat;
+//   background-position: left;
+//   background-size: cover;
+//   @apply w-full h-full flex flex-col justify-center;
+// }
+
+// .banner__tenis{
+//   background-image: url("../../assets/banner/tenisSmall.jpg");
+//   background-repeat: no-repeat;
+//   background-position: left;
+//   background-size: cover;
+//   @apply w-full h-full flex flex-col justify-center
+// }
+
+.banner__tecnologia {
+  box-sizing: border-box;
+  background-image: url("../../assets/banner/gamerSmall.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  @apply w-full h-full flex flex-col justify-center;
+}
+
+.banner__tecnologia:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+  border-radius: 17px;
+}
+
+.banner__tecnologia:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+  border-radius: 17px;
+}
+
+.banner__camisas {
+  box-sizing: border-box;
+  background-image: url("../../assets/banner/camisasLarge.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  @apply w-full h-full flex flex-col justify-center;
+}
+
+.banner__camisas:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+  border-radius: 17px;
+}
+
+.banner__camisas:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+  border-radius: 17px;
+}
+
+.banner__tenis {
+  box-sizing: border-box;
+  background-image: url("../../assets/banner/tenisSmall.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  @apply w-full h-full flex flex-col justify-center;
+}
+
+.banner__tenis:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+.banner__tenis:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}

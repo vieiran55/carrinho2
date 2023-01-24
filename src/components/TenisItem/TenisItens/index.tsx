@@ -1,4 +1,4 @@
-import styles from "./CamisasItens.module.scss";
+import styles from "./TenisItens.module.scss";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -22,7 +22,7 @@ interface Props {
   setIsShown: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function CamisasItens(props: Props) {
+export default function TenisItens(props: Props) {
   const {
     id,
     title,
