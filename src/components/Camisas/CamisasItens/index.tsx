@@ -69,6 +69,7 @@ export default function CamisasItens(props: Props) {
     return item.id;
   });
 
+  
   const index = listaDeCompras.findIndex((user) => user.id === id);
 
   const recarrega1 = () => {
@@ -95,10 +96,11 @@ export default function CamisasItens(props: Props) {
     }
   };
 
+  const valorDesconto = price*0.90;
 
   return (
     <>
-      <div className={classNames({ [styles.item]: true, [styles.bttn]:true })}>
+      {/* <div className={classNames({ [styles.item]: true, [styles.bttn]:true })}>
         <div className={styles.item__titulo}>
           <h2>{title.substring(0, 50)}</h2>
         </div>
@@ -128,6 +130,67 @@ export default function CamisasItens(props: Props) {
                 onAnimationEnd={() => setEfeito(false)}
               />
             </button>
+          </div>
+        </div>
+      </div> */}
+      <div className={styles.flipcard}>
+        <div className={styles.flipcardinner}>
+          <div className={styles.flipcardfront}>
+            <div className={styles.item__titulo}>
+              <h2>{title.substring(0, 30)}</h2>
+            </div>
+            <div className={styles.item__imagem}>
+              <p>
+                <img src={`${photo}`} alt={title} />
+              </p>
+            </div>
+            <div className={styles.item__SetordePreco}>
+              <div className={styles.item__valor}>
+                <h2 className={styles.item__valor__total}>
+                  {" "}
+                  R$ {price.toFixed(2)}
+                  
+                </h2>
+                <h2>
+                  {" "}
+                  R$ {valorDesconto.toFixed(2)}
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.flipcardback}>
+            <div className={styles.item__titulo}>
+              <h2>{title.substring(0, 30)}</h2>
+            </div>
+            <div className={styles.item__imagem}>
+              <p>
+                <img src={`${photo}`} alt={title} />
+              </p>
+            </div>
+            <div className={styles.item__SetordePreco}>
+              <div className={styles.item__valor}>
+                {" "}
+                R$ {price.toFixed(2)}
+                <button
+                  className={styles.item__BotaoComprar}
+                  // onClick={() => navigate("/finalcompra")}
+                >
+                  Comprar
+                </button>
+              </div>
+              <div className={styles.item__comprar}>
+                <button disabled={true}>
+                  <MdOutlineAddShoppingCart
+                    className={`${
+                      efeito && "animate-balanco"
+                    }  p-0 fill-[#5AAD7D] rounded h-8 w-8 cursor-pointer`}
+                    onClick={adicionarItemNoCarrinho}
+                    onAnimationEnd={() => setEfeito(false)}
+                  />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

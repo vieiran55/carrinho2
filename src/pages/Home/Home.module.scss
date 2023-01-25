@@ -133,3 +133,9 @@
 .banner__tenis:active {
   transform: scale(0.95) rotateZ(1.7deg);
 }
+
+@keyframes load89234 {
+  100% {
+    background-position: -100% 0;
+  }
+}

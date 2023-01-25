@@ -1,9 +1,11 @@
 import estilos from "./BarraNavegacao.module.scss";
 import { GiShoppingCart } from "react-icons/gi";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { IOpcoes } from "interfaces/IOpcoes";
 import { useEffect, useState } from "react";
 import classNames from "classnames";
 import { Link, useNavigate } from "react-router-dom";
+import "tw-elements";
 
 interface Props {
   cart: boolean;
@@ -15,9 +17,8 @@ interface Props {
 }
 
 export default function BarraNavegacao(props: Props) {
-  const { cart, setCart, listaDeCompras, setListaDeCompras, vazio, setVazio } = props;
-  
-  
+  const { cart, setCart, listaDeCompras, setListaDeCompras, vazio, setVazio } =
+    props;
 
   const abrirCarrinho = () => {
     if (!cart) {
@@ -33,21 +34,87 @@ export default function BarraNavegacao(props: Props) {
 
   return (
     <nav className={estilos.barra}>
+      <div className="flex justify-center">
+        <div>
+          <div
+            className={classNames({
+              ["dropdown"]: true,
+              [estilos.drop]: true,
+            })}
+          >
+            <button
+              className={classNames({
+                ["dropdown-toggle"]: true,
+                [estilos.drop__botao]: true,
+              })}
+              data-bs-toggle="dropdown"
+            >
+              <GiHamburgerMenu className={estilos.icon}/>
+            </button>
+            <ul
+              className={classNames({
+                ["dropdown-menu"]: true,
+                [estilos.drop__lista]: true,
+              })}
+              aria-labelledby="dropdownMenuButton1"
+            >
+              <Link
+                className={classNames({
+                  ["dropdown-item"]: true,
+                  [estilos.drop__item]: true,
+                })}
+                to={"/"}
+              >
+                Home
+              </Link>
+              <Link
+                className={classNames({
+                  ["dropdown-item"]: true,
+                  [estilos.drop__item]: true,
+                })}
+                to={"/tecnologia"}
+              >
+                Tecnologia
+              </Link>
+              <Link
+                className={classNames({
+                  ["dropdown-item"]: true,
+                  [estilos.drop__item]: true,
+                })}
+                to={"/camisas"}
+              >
+                Camisas
+              </Link>
+              <Link
+                className={classNames({
+                  ["dropdown-item"]: true,
+                  [estilos.drop__item]: true,
+                })}
+                to={"/tenis"}
+              >
+                Tenis
+              </Link>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <div className={estilos.links}>
-        <Link className={estilos.links__itens}  to={"/"} >
-        Home
+        <Link className={estilos.links__itens} to={"/"}>
+          Home
         </Link>
-        <Link className={estilos.links__itens}  to={"/tecnologia"} >
-        Tecnologia
+        <Link className={estilos.links__itens} to={"/tecnologia"}>
+          Tecnologia
         </Link>
-        <Link className={estilos.links__itens}  to={"/camisas"} >
-        Camisas
+        <Link className={estilos.links__itens} to={"/camisas"}>
+          Camisas
         </Link>
-        <Link className={estilos.links__itens}  to={"/tenis"} >
-        Tenis
+        <Link className={estilos.links__itens} to={"/tenis"}>
+          Tenis
         </Link>
       </div>
-      <div className={estilos.carrinho}  onClick={abrirCarrinho}>
+
+      <div className={estilos.carrinho} onClick={abrirCarrinho}>
         <GiShoppingCart
           className={estilos.carrinho__icon}
           data-bs-toggle="modal"

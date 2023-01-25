@@ -24,7 +24,7 @@
       img {
         float: left;
         border-radius: 8px;
-        width: 230px;
+        width: 190px;
         height: 190px;
         background-size:cover;
         margin-right: 5px;
@@ -60,6 +60,7 @@
         text-align: center;
         font-size: 1rem;
         font-weight: bold;
+        color: black
       }
     }
     &__valor {
@@ -70,6 +71,11 @@
         font-weight: bold;
         color: black;
         width: 100%;
+        &__total{
+          font-size: 1.25rem;
+          color: grey;
+          text-decoration: line-through;
+        }
     }
   }
 
@@ -81,7 +87,7 @@
     width: 100%;
     height: 4em;
     .item__BotaoComprar{
-      @apply w-[14rem] inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out;
+      @apply w-full inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out;
     }
     .item__comprar{
       display: flex;
@@ -99,46 +105,99 @@
     }
   }
 
-  .bttn {
-    font-size: 17px;
-    color: black;
-    position: relative;
-    transition: 0.5s ease;
-    background-image: url(../../../assets/blobtest2.svg);
-    background-repeat: no-repeat;
-    background-position: left;
-  }
+  // .bttn {
+  //   font-size: 17px;
+  //   color: black;
+  //   position: relative;
+  //   transition: 0.5s ease;
+  //   background-image: url(../../../assets/blobtest2.svg);
+  //   background-repeat: no-repeat;
+  //   background-position: left;
+  // }
   
-  .bttn:hover {
-    color: white;
-    transition-delay: 0.5s;
-    z-index: 1000;
-  }
+  // .bttn:hover {
+  //   color: white;
+  //   transition-delay: 0.5s;
+  //   z-index: 1000;
+  // }
   
-  .bttn:hover::before {
-    width: 100%;
+  // .bttn:hover::before {
+  //   width: 100%;
     
+  // }
+  
+  // .bttn::after {
+  //   content: "";
+  //   position: absolute;
+  //   left: 0;
+  //   bottom: 0;
+  //   height: 0;
+  //   width: 100%;
+  //   background-color: #6493eb;
+  //   transition: 0.4s ease;
+  //   z-index: -1;
+  //   border-radius: 50px;
+  //   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; 
+  //   background-image: url(../../../assets/blob2.svg);
+  //   background-repeat: no-repeat;
+  //   background-position: left;
+  // }
+  
+  // .bttn:hover::after {
+  //   height: 100%;
+  //   transition-delay: 0.4s;
+  //   color: aliceblue;
+  // }
+
+  .flipcard {
+    background-color: transparent;
+    width: 190px;
+    height: 340px;
+    perspective: 1000px;
+    font-family: sans-serif;
   }
   
-  .bttn::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 0;
+  .title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .flipcardinner {
+    position: relative;
     width: 100%;
-    background-color: #6493eb;
-    transition: 0.4s ease;
-    z-index: -1;
-    border-radius: 50px;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; 
-    background-image: url(../../../assets/blob2.svg);
-    background-repeat: no-repeat;
-    background-position: left;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
   }
   
-  .bttn:hover::after {
+  .flipcard:hover .flipcardinner {
+    transform: rotateY(180deg);
+  }
+  
+  .flipcardfront, .flipcardback {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
     height: 100%;
-    transition-delay: 0.4s;
-    color: aliceblue;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid coral;
+    border-radius: 1rem;
+  }
+  
+  .flipcardfront {
+    background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222));
+    color: coral;
+  }
+  
+  .flipcardback {
+    background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%);
+    color: white;
+    transform: rotateY(180deg);
   }

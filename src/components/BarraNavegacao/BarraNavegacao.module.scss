@@ -2,9 +2,17 @@
 @import "styles/breakpoints";
 
 .barra{
-  @apply h-16 flex flex-row justify-between bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white text-lg ;
+  background: linear-gradient(120deg, #8b5cf6 30%, #d946ef 38%, #d946ef 
+  40%, #8b5cf6 48%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: load89234 5s infinite;
+  @apply  h-16 flex flex-row justify-between  text-white text-lg ;
   .links{
     @apply p-4;
+    @media screen and (max-width: 400px) {
+      display: none;
+  }  
     &__itens{
       @apply p-1;
     }
@@ -19,4 +27,33 @@
       @apply text-green-600 block absolute bg-violet-800 w-7 text-center rounded-full mt-8 ml-5 opacity-90 font-bold;
     }
   }
+}
+
+@keyframes load89234 {
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.drop{
+  @apply relative h-full;
+  @media screen and (min-width: 400px) {
+        display: none;
+    }  
+}
+
+.drop__botao{
+  @apply  px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg active:text-white transition duration-150 ease-in-out flex items-center whitespace-nowrap h-full; 
+}
+
+.icon{
+  @apply w-8 h-8;
+}
+
+.drop__lista{
+  @apply dropdown-menu min-w-max absolute hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none;
+}
+
+.drop__item{
+  @apply text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100;
 }
