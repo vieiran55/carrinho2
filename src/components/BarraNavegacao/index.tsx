@@ -92,7 +92,7 @@ export default function BarraNavegacao(props: Props) {
                 })}
                 to={"/tenis"}
               >
-                Tenis
+                Tênis
               </Link>
             </ul>
           </div>
@@ -110,7 +110,7 @@ export default function BarraNavegacao(props: Props) {
           Camisas
         </Link>
         <Link className={estilos.links__itens} to={"/tenis"}>
-          Tenis
+          Tênis
         </Link>
       </div>
 

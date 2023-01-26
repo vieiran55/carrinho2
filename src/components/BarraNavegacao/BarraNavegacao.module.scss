@@ -10,7 +10,7 @@
   @apply  h-16 flex flex-row justify-between  text-white text-lg ;
   .links{
     @apply p-4;
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 450px) {
       display: none;
   }  
     &__itens{
@@ -37,7 +37,7 @@
 
 .drop{
   @apply relative h-full;
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: 450px) {
         display: none;
     }  
 }
@@ -51,7 +51,7 @@
 }
 
 .drop__lista{
-  @apply dropdown-menu min-w-max absolute hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none;
+  @apply dropdown-menu  min-w-max absolute hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none;
 }
 
 .drop__item{
