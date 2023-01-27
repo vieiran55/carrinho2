@@ -1,29 +1,50 @@
-@import 'styles/variaveis';
+@import "styles/variaveis";
 @import "styles/breakpoints";
 
-.barra{
-  background: linear-gradient(120deg, #8b5cf6 30%, #d946ef 38%, #d946ef 
-  40%, #8b5cf6 48%);
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+
+.barra {
+  font-family: "Michroma", sans-serif;
+  background: linear-gradient(
+    120deg,
+    #ff3425 30%,
+    #fbc12c 48%,
+    #fbc12c 50%,
+    #ff3425 58%
+  );
   background-size: 200% 100%;
   background-position: 100% 0;
   animation: load89234 5s infinite;
-  @apply  h-16 flex flex-row justify-between  text-white text-lg ;
-  .links{
-    @apply p-4;
-    @media screen and (max-width: 450px) {
-      display: none;
-  }  
-    &__itens{
-      @apply p-1;
+  @apply h-[7rem] flex flex-row justify-between  text-white;
+  .logo {
+    @apply w-[15rem] h-full fill-red-700;
+    &__imagem {
+      @apply w-full h-full;
     }
   }
-  .carrinho{
+  .links {
+    @apply self-center p-2 uppercase font-bold text-xs;
+    @media screen and (max-width: 450px) {
+      display: none;
+    }
+    @media screen and (min-width: 950px) {
+      @apply text-2xl;
+    }
+    &__itens {
+      margin: 0 1em;
+      @apply p-1;
+      &:hover{
+        @apply border-4
+      }
+    }
+  }
+  .carrinho {
     transition: 500ms;
     @apply bg-white w-14 rounded-l-lg flex;
-    &__icon{
+    &__icon {
       @apply h-full w-12 fill-black p-1 pr-0;
     }
-    &__quantidade{
+    &__quantidade {
       @apply text-green-600 block absolute bg-violet-800 w-7 text-center rounded-full mt-8 ml-5 opacity-90 font-bold;
     }
   }
@@ -35,25 +56,25 @@
   }
 }
 
-.drop{
+.drop {
   @apply relative h-full;
   @media screen and (min-width: 450px) {
-        display: none;
-    }  
+    display: none;
+  }
 }
 
-.drop__botao{
-  @apply  px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg active:text-white transition duration-150 ease-in-out flex items-center whitespace-nowrap h-full; 
+.drop__botao {
+  @apply px-6 py-2.5 bg-slate-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-slate-800 hover:shadow-lg focus:bg-slate-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-500 active:shadow-lg active:text-white transition duration-150 ease-in-out flex items-center whitespace-nowrap h-full;
 }
 
-.icon{
+.icon {
   @apply w-8 h-8;
 }
 
-.drop__lista{
-  @apply dropdown-menu  min-w-max absolute hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none;
+.drop__lista {
+  @apply dropdown-menu  min-w-max absolute  bg-slate-800 text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none;
 }
 
-.drop__item{
-  @apply text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100;
+.drop__item {
+  @apply  py-2 px-4 block w-full whitespace-nowrap bg-transparent text-white font-bold  hover:bg-gray-100 uppercase;
 }

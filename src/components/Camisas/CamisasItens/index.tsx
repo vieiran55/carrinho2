@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { IOpcoes } from "interfaces/IOpcoes";
 import classNames from "classnames";
+import { toast } from "react-toastify";
 
 interface Props {
   title: string;
@@ -80,6 +81,7 @@ export default function CamisasItens(props: Props) {
   };
 
   const adicionarItemNoCarrinho = () => {
+    notify();
     setTimeout(recarrega1, 100);
     setTimeout(recarrega2, 150);
     if (index < 0) {
@@ -98,41 +100,22 @@ export default function CamisasItens(props: Props) {
 
   const valorDesconto = price*0.90;
 
+  const notify = () => {
+    toast.success("Adicionado ao carrinho!", {
+      icon: ({theme, type}) =>  <img src={photo}/>,
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+
   return (
     <>
-      {/* <div className={classNames({ [styles.item]: true, [styles.bttn]:true })}>
-        <div className={styles.item__titulo}>
-          <h2>{title.substring(0, 50)}</h2>
-        </div>
-        <div className={styles.item__imagem}>
-          <p>
-            <img src={`${photo}`} alt={title} />
-          </p>
-        </div>
-        <div className={styles.item__SetordePreco}>
-          <div className={styles.item__valor}>
-            {" "}
-            R$ {price.toFixed(2)}
-            <button
-              className={styles.item__BotaoComprar}
-              // onClick={() => navigate("/finalcompra")}
-            >
-              Comprar
-            </button>
-          </div>
-          <div className={styles.item__comprar}>
-            <button disabled={true}>
-              <MdOutlineAddShoppingCart
-                className={`${
-                  efeito && "animate-balanco"
-                }  p-0 fill-[#5AAD7D] rounded h-8 w-8 cursor-pointer`}
-                onClick={adicionarItemNoCarrinho}
-                onAnimationEnd={() => setEfeito(false)}
-              />
-            </button>
-          </div>
-        </div>
-      </div> */}
       <div className={styles.flipcard}>
         <div className={styles.flipcardinner}>
           <div className={styles.flipcardfront}>

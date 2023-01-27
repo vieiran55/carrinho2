@@ -3,6 +3,8 @@ import classNames from "classnames";
 import ItemCarrinho from "./ItemCarrinho";
 import { IOpcoes } from "interfaces/IOpcoes";
 import { useEffect, useState } from "react";
+import { ToastContainer} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 interface Props {
   cart: boolean;
@@ -37,37 +39,53 @@ export default function Modal(props: Props) {
   );
 
   return (
-    <div
-      className={classNames({
-        ["hidden"]: true,
-        [estilos.modal]: cart,
-      })}
-    >
-      <h1 className={estilos.texto}>CARRINHO DE COMPRAS</h1>
-      {isShown && (
-        <>
-          <div
-            className={classNames({
-              ["hidden"]: vazio,
-            })}
-          >
-            Seu carrinho está vazio
-          </div>
-          <div>
-            <ItemCarrinho
-              isShown={isShown}
-              setIsShown={setIsShown}
-              quantidadeArr={quantidadeArr}
-              setQuantidadeArr={setQuantidadeArr}
-              listaDeCompras={listaDeCompras}
-              setListaDeCompras={setListaDeCompras}
-            />
-          </div>
-        </>
-      )}
-      <div>
-        <h1 className="text-white">{`Total: R$ ${total.toFixed(2)}`}</h1>
+    <>
+      <div
+        className={classNames({
+          ["hidden"]: true,
+          [estilos.modal]: cart,
+        })}
+      >
+        <h1 className={estilos.texto}>CARRINHO DE COMPRAS</h1>
+        {isShown && (
+          <>
+            <div
+              className={classNames({
+                ["hidden"]: vazio,
+              })}
+            >
+              Seu carrinho está vazio
+            </div>
+            <div>
+              <ItemCarrinho
+                isShown={isShown}
+                setIsShown={setIsShown}
+                quantidadeArr={quantidadeArr}
+                setQuantidadeArr={setQuantidadeArr}
+                listaDeCompras={listaDeCompras}
+                setListaDeCompras={setListaDeCompras}
+              />
+            </div>
+          </>
+        )}
+        <div>
+          <h1 className="text-white">{`Total: R$ ${total.toFixed(2)}`}</h1>
+        </div>
       </div>
-    </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+      {/* Same as */}
+      <ToastContainer />
+    </>
   );
 }

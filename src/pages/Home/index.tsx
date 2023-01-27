@@ -41,12 +41,10 @@ export default function Home(props: Props) {
   return (
     <main className={estilos.corpo}>
       <div className={estilos.promocao}>
-        <div className={estilos.circle}></div>
-        <div className={estilos.circle}></div>
-        <img className={estilos.promocao__imagemS} src={promocaoS} alt="" />
-        <img className={estilos.promocao__imagemL} src={promocaoL} alt="" />
+        <img  className={estilos.promocao__imagemS} src={promocaoS} alt="" />
+        <img  className={estilos.promocao__imagemL} src={promocaoL} alt="" />
       </div>
-      <div className={estilos.banner__container}>
+      <div  className={estilos.banner__container}>
         <Link className={estilos.banner} to={"/tecnologia"}>
           <div className={estilos.banner__tecnologia}>
             <h1 className={estilos.banner__titulo}>Tecnologia</h1>
@@ -64,7 +62,7 @@ export default function Home(props: Props) {
             <h1 className={estilos.banner__titulo}>Tênis</h1>
           </div>
         </Link>
-      </div>
+      </div >
     </main>
   );
 }

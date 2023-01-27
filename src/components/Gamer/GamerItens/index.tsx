@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { IOpcoes } from "interfaces/IOpcoes";
 import classNames from "classnames";
+import { toast } from "react-toastify";
 
 interface Props {
   title: string;
@@ -79,6 +80,7 @@ export default function GamerItens(props: Props) {
   };
 
   const adicionarItemNoCarrinho = () => {
+    notify();
     setTimeout(recarrega1, 100);
     setTimeout(recarrega2, 150);
     if (index < 0) {
@@ -95,7 +97,21 @@ export default function GamerItens(props: Props) {
     }
   };
 
-  const valorDesconto = price*0.90;
+  const notify = () => {
+    toast.success("Adicionado ao carrinho!", {
+      icon: ({theme, type}) =>  <img src={photo}/>,
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+
+  const valorDesconto = price * 0.9;
 
   return (
     <>
@@ -115,12 +131,8 @@ export default function GamerItens(props: Props) {
                 <h2 className={styles.item__valor__total}>
                   {" "}
                   R$ {price.toFixed(2)}
-                  
                 </h2>
-                <h2>
-                  {" "}
-                  R$ {valorDesconto.toFixed(2)}
-                </h2>
+                <h2> R$ {valorDesconto.toFixed(2)}</h2>
               </div>
             </div>
           </div>

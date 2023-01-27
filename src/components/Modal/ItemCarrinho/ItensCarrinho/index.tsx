@@ -4,6 +4,7 @@ import { IOpcoes } from "interfaces/IOpcoes";
 import { TfiTrash } from "react-icons/tfi";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { IoIosRemoveCircleOutline } from "react-icons/io";
+import { toast } from "react-toastify";
 
 
 interface Props {
@@ -37,18 +38,34 @@ export default function ItensCarrinho(props: Props) {
   const index = listaDeCompras.findIndex((user) => user.id === id);
   const [cont, setCont] = useState<IOpcoes[]>([]);
 
-  const excluirItemDoCarrinho = () => {
-    listaDeCompras.splice(index, 1);
-    setListaDeCompras([...listaDeCompras]);
-  };
-
+  
   const quantidadeElementos = listaDeCompras.filter((x) => x.id === id).length;
-
+  
   const recarrega1 = () => {
     setIsShown(false);
   };
   const recarrega2 = () => {
     setIsShown(true);
+  };
+  
+  const notify = () => {
+    toast.warn("Removido do Carrinho", {
+      icon: ({theme, type}) =>  <img src={photo}/>,
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+  
+  const excluirItemDoCarrinho = () => {
+    notify();
+    listaDeCompras.splice(index, 1);
+    setListaDeCompras([...listaDeCompras]);
   };
 
   const aumentarQuantidade = () => {
@@ -66,6 +83,7 @@ export default function ItensCarrinho(props: Props) {
       excluirItemDoCarrinho();
     }
   };
+
   return (
     <>
       <div className={styles.item}>

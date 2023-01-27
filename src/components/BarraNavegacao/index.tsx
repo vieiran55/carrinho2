@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import classNames from "classnames";
 import { Link, useNavigate } from "react-router-dom";
 import "tw-elements";
+import logo from "../../assets/logo.png";
 
 interface Props {
   cart: boolean;
@@ -34,7 +35,8 @@ export default function BarraNavegacao(props: Props) {
 
   return (
     <nav className={estilos.barra}>
-      <div className="flex justify-center">
+      
+      <div className="flex justify-center md:hidden">
         <div>
           <div
             className={classNames({
@@ -49,7 +51,7 @@ export default function BarraNavegacao(props: Props) {
               })}
               data-bs-toggle="dropdown"
             >
-              <GiHamburgerMenu className={estilos.icon}/>
+              <GiHamburgerMenu className={estilos.icon} />
             </button>
             <ul
               className={classNames({
@@ -97,6 +99,10 @@ export default function BarraNavegacao(props: Props) {
             </ul>
           </div>
         </div>
+      </div>
+
+      <div className={estilos.logo}>
+        <img className={estilos.logo__imagem} src={logo} alt="" />
       </div>
 
       <div className={estilos.links}>
