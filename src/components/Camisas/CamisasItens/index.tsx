@@ -158,6 +158,7 @@ export default function CamisasItens(props: Props) {
                 <button
                   className={styles.item__BotaoComprar}
                   // onClick={() => navigate("/finalcompra")}
+                  onClick={adicionarItemNoCarrinho}
                 >
                   Comprar
                 </button>
