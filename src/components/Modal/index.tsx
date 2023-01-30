@@ -3,8 +3,9 @@ import classNames from "classnames";
 import ItemCarrinho from "./ItemCarrinho";
 import { IOpcoes } from "interfaces/IOpcoes";
 import { useEffect, useState } from "react";
-import { ToastContainer} from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { MdOutlineClose } from "react-icons/md";
 
 interface Props {
   cart: boolean;
@@ -38,6 +39,7 @@ export default function Modal(props: Props) {
     0
   );
 
+
   return (
     <>
       <div
@@ -46,7 +48,10 @@ export default function Modal(props: Props) {
           [estilos.modal]: cart,
         })}
       >
-        <h1 className={estilos.texto}>CARRINHO DE COMPRAS</h1>
+        <div className={estilos.cabecalho}>
+          <h1 className={estilos.texto}>Carrinho</h1>
+          <MdOutlineClose className={estilos.close} onClick={() => setCart(!cart)}/>
+        </div>
         {isShown && (
           <>
             <div
@@ -68,8 +73,8 @@ export default function Modal(props: Props) {
             </div>
           </>
         )}
-        <div>
-          <h1 className="text-white">{`Total: R$ ${total.toFixed(2)}`}</h1>
+        <div className={estilos.finalizar}>
+          <h1 className="text-white">{`FINALIZAR COMPRA (R$ ${total.toFixed(2)})`}</h1>
         </div>
       </div>
       <ToastContainer

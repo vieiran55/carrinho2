@@ -40,9 +40,9 @@
   }
   .carrinho {
     transition: 500ms;
-    @apply bg-white w-14 rounded-l-lg flex;
+    @apply bg-slate-800 w-14  flex;
     &__icon {
-      @apply h-full w-12 fill-black p-1 pr-0;
+      @apply h-full w-12 fill-white p-1 pr-0;
     }
     &__quantidade {
       @apply text-green-600 block absolute bg-violet-800 w-7 text-center rounded-full mt-8 ml-5 opacity-90 font-bold;
@@ -64,7 +64,7 @@
 }
 
 .drop__botao {
-  @apply px-6 py-2.5 bg-slate-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-slate-800 hover:shadow-lg focus:bg-slate-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-500 active:shadow-lg active:text-white transition duration-150 ease-in-out flex items-center whitespace-nowrap h-full;
+  @apply px-4 py-2.5 bg-slate-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-slate-800 hover:shadow-lg focus:bg-slate-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-500 active:shadow-lg active:text-white transition duration-150 ease-in-out flex items-center whitespace-nowrap h-full;
 }
 
 .icon {
@@ -72,7 +72,7 @@
 }
 
 .drop__lista {
-  @apply dropdown-menu  min-w-max absolute  bg-slate-800 text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none;
+  @apply dropdown-menu  w-[100vw] absolute  bg-slate-800 text-lg z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none;
 }
 
 .drop__item {

@@ -2,7 +2,7 @@
 @import "styles/breakpoints";
 
 .corpo{
-  @apply bg-gradient-to-r from-cyan-500 to-blue-500 flex flex-col justify-center items-center;
+  @apply bg-white flex flex-col justify-center items-center;
   @media (min-width: $desktop_md) {
     @apply flex-col h-[80vw] mt-10;
   }
@@ -76,6 +76,9 @@
     overflow: hidden;
     border-radius: 20px;
     @apply w-full h-full flex flex-col justify-center;
+    @media (min-width: $desktop_md) {
+      filter: grayscale(100%);
+    }
     &::before {
       content: '';
       position: absolute;
@@ -84,6 +87,7 @@
       height: 400%;
       animation: rotBGimg 5s linear infinite;
       transition: all 0.2s linear;
+      filter: none;
     }
     &::after {
       content: '';
@@ -94,11 +98,13 @@
       background-size: cover;
       inset: 5px;
       border-radius: 15px;
+      filter: none;
       @media (min-width: $desktop_md) {
         background-image: $bannerLarge;
       }
     }
     &:hover {
+      filter: none;
       transform: scale(1.04) rotate(1deg);
     }  
 }

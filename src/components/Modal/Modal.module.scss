@@ -1,6 +1,19 @@
 .modal {
-  @apply absolute animate-fadeinDown w-[20rem] bg-red-600 self-end mt-16 flex items-center flex-col justify-center opacity-90 drop-shadow-4xl rounded-lg rounded-tr-none z-50;
+  @apply absolute animate-fadeinDown w-[100vw] bg-red-600 self-end mt-16 flex items-center flex-col justify-center opacity-90 drop-shadow-4xl rounded-lg rounded-tr-none z-50;
+  @media (min-width: 780px){
+   @apply w-80;
+  }
+  .cabecalho{
+    @apply flex items-center flex-row  justify-between w-full p-4 my-1;
+    border-bottom: 2px solid;
+  }
+  .close{
+    @apply w-8 h-8;
+  }
   .texto {
-    @apply text-2xl text-white font-inter;
+    @apply text-2xl text-black font-inter font-bold;
+  }
+  .finalizar{
+    @apply bg-slate-800 p-2 my-4;
   }
 }

@@ -2,7 +2,7 @@
 @import "styles/breakpoints";
 
 .corpo{
-  @apply bg-gradient-to-r from-cyan-500 to-blue-500 flex flex-col justify-center items-center;
+  @apply bg-white flex flex-col justify-center items-center;
 }
 
 .botoes__tipo__up{
