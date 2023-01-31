@@ -76,7 +76,7 @@ export default function Modal(props: Props) {
           </>
         )}
         <div className={estilos.finalizar}  onClick={() => navigate("/finalcompra")}>
-          <h1 className="text-white">{`FINALIZAR COMPRA (R$ ${total.toFixed(2)})`}</h1>
+          <button className="text-white">{`FINALIZAR COMPRA (R$ ${total.toFixed(2)})`}</button>
         </div>
       </div>
       <ToastContainer
