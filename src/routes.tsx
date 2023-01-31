@@ -11,14 +11,12 @@ import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import estilos from "./styles/Routes.module.scss";
 
-
 export default function AppRouter() {
   const [cart, setCart] = useState(false);
   const [vazio, setVazio] = useState(false);
   const [listaDeCompras, setListaDeCompras] = useState<IOpcoes[]>([]);
   const [quantidadeArr, setQuantidadeArr] = useState(1);
   const [isShown, setIsShown] = useState(true);
-
 
   return (
     <main className={estilos.routes}>
@@ -104,7 +102,19 @@ export default function AppRouter() {
               />
             }
           />
-          <Route path="/finalcompra" element={<FinalCompra />} />
+          <Route
+            path="/finalcompra"
+            element={
+              <FinalCompra
+                isShown={isShown}
+                setIsShown={setIsShown}
+                quantidadeArr={quantidadeArr}
+                setQuantidadeArr={setQuantidadeArr}
+                listaDeCompras={listaDeCompras}
+                setListaDeCompras={setListaDeCompras}
+              />
+            }
+          />
         </Routes>
       </Router>
     </main>

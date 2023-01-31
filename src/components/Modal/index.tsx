@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { MdOutlineClose } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   cart: boolean;
@@ -21,6 +22,7 @@ interface Props {
 }
 
 export default function Modal(props: Props) {
+  const navigate = useNavigate();
   const {
     cart,
     setCart,
@@ -73,7 +75,7 @@ export default function Modal(props: Props) {
             </div>
           </>
         )}
-        <div className={estilos.finalizar}>
+        <div className={estilos.finalizar}  onClick={() => navigate("/finalcompra")}>
           <h1 className="text-white">{`FINALIZAR COMPRA (R$ ${total.toFixed(2)})`}</h1>
         </div>
       </div>

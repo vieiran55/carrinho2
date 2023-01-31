@@ -1,0 +1,23 @@
+.item{
+  @apply w-full flex flex-col border-4;
+  &__titulo{
+    @apply text-center;
+  }
+  &__imagem{
+    @apply w-10 h-10;
+  }
+  &__SetordePreco{
+    @apply w-32 flex flex-col justify-between p-1;
+  }
+  &__quantidade{
+    @apply flex flex-row justify-between w-full;
+  }
+  .botoes{
+    &__icones{
+      @apply w-8;
+    }
+  }
+  .conteiner{
+    @apply flex flex-row w-full justify-around;
+  }
+}

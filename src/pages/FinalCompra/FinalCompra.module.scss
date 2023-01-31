@@ -1,0 +1,15 @@
+.final{
+  @apply w-full flex flex-col justify-center items-center;
+  &__container{
+    @apply w-[80%]
+  }
+}
+.voltar__container{
+  @apply bg-slate-800 w-full flex justify-center;
+}
+.voltar{
+  @apply fill-red-600 w-10 h-10 animate-wiggle;
+}
+.voltar__texto{
+  @apply text-white w-10 h-10 font-bold text-2xl text-center my-1;
+}

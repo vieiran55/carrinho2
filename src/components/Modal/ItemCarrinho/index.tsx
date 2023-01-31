@@ -21,21 +21,6 @@ export default function ItemCarrinho(props: Props) {
     isShown,
     setIsShown,
   } = props;
-  // // está redondo, funciona
-  // function hasDuplicates(arr: number[] = []) {
-  //   return new Set(arr).size !== arr.length;
-  // }
-  // const arr = listaDeCompras.map(function (item) {
-  //   return item.id;
-  // });
-  // const verificarIguais = () => {
-  //   if (hasDuplicates(arr)) {
-  //     console.log("Duplicate elements found.");
-  //   } else {
-  //     console.log("No Duplicates found.");
-  //   }
-  // }
-  // //
 
   return (
     <>
