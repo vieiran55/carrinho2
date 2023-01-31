@@ -61,7 +61,7 @@ export default function Modal(props: Props) {
                 ["hidden"]: vazio,
               })}
             >
-              Seu carrinho está vazio!
+              Seu carrinho está vazio
             </div>
             <div>
               <ItemCarrinho
