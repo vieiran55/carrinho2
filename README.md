@@ -1,8 +1,7 @@
-# PROJETO DE MARKET PLACE em REACT/TS
+  # PROJETO DE MARKET PLACE em REACT/TS
 
 
-[![Vídeo de Demonstração](link_para_video_demo.png)](https://github.com/vieiran55/files_media/blob/main/loja.mp4)
-*Inclua um vídeo curto demonstrando as principais funcionalidades do seu projeto.*
+[![Vídeo de Demonstração](link_para_video_demo.png)](https://youtu.be/CT_uOMI6VAM)
 
 <video width="640" height="360" controls>
   <source src="https://github.com/vieiran55/files_media/blob/main/loja.mp4" type="video/mp4">
